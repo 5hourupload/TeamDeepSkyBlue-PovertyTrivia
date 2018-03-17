@@ -1,17 +1,33 @@
 package deepskyblue.povertycrack;
 
-import android.content.Intent;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class SoloGame extends MainActivity {
-    private void startSolo(){
-        
+    //every new question that is called in main calls this method
+    //This method calls the appropriate method to execute the question
+    private void newQuestion(String passedQ, String passedA){
+        switch (passedQ.charAt(0)){
+            case 'T':
+                highLow(passedQ, passedA);
+                break;
+            case 'M':
+                multipleChoice(passedQ, passedA);
+                break;
+            case 'S':
+                slider(passedQ, passedA);
+                break;
+            case 'C':
+                checkAll(passedQ, passedA);
+                break;
+        }
     }
 
-    private void highLow(String Question, String Answer){
-        TextView Q = findViewById(R.id.questionBox);
-        String test = "";
-        Q.setText(test);
+    private void highLow(String question, String answer){
+        TextView Q = findViewById(R.id.questionText);
+        Q.setText(question);
+        Button True = findViewById(R.id.buttonTrue);
+        Button False = findViewById(R.id.buttonFalse);
     }
 
     private void checkAll(String question, String Answer){
@@ -23,6 +39,7 @@ public class SoloGame extends MainActivity {
     private void multipleChoice(String question, String answer){
         TextView Q = findViewById(R.id.questionText);
         Q.setText(question);
+
 
     }
 
