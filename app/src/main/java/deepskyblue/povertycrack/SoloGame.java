@@ -13,17 +13,20 @@ import java.util.LinkedList;
 import java.util.Map;
 
 public class SoloGame extends AppCompatActivity {
+    private int count = 0;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.background_template);
     }
 
     //every new question that is called in main calls this method
     //This method calls the appropriate method to execute the question
     private ArrayList<Object> results = new ArrayList<>();
-    private void newQuestion(String passedQ, String passedA){
 
+    private void newQuestion(String passedQ, String passedA){
+        count++;
+        question currentQuestion = new question(count, passedQ, passedA, false);
         switch (passedQ.charAt(0)){
             case 'T':
                 highLow(passedQ, passedA);
@@ -42,7 +45,7 @@ public class SoloGame extends AppCompatActivity {
 
     private void checkAnswer(String selectedA, String correctA){
         if(selectedA.equals(correctA)){
-            ;
+            
         }
     }
 
