@@ -81,30 +81,30 @@ public class StatisticsReader extends AppCompatActivity
         for(int i = 0; i < rows; i++){
             String year = s.getCell(0,i).getContents();
             String type = s.getCell(1,i).getContents();
-            String group = s.getCell(0,i).getContents();
+            String group = s.getCell(2,i).getContents();
+            String value = s.getCell(3,i).getContents();
             int questionType = (int)(Math.random() * 3) + 1;
             switch (questionType){
                 case 1:
-                    generateTrueFalse();
+                    generateTrueFalse(year, type, group, value);
+                    break;
+                case 2:
+
             }
         }
-
-        generateTrueFalse(s.getCell(0,));
     }
 
     private void generateTrueFalse(String year, String type, String group, String value){
+        int currentYear = 2018;
         Random r = new Random();
         boolean TorF = r.nextBoolean();
         if(TorF){
-            String q =
+            String q = "True or False: In " +year+ ", the " +type+ " for " +group+ " was " +value+ "?";
         }
-        String q = "True or False: In " +year+
+        else{
+            int changeValue = (int)(Math.random());
+            if(changeValue == 0){
+            }
+        }
     }
-
-    public void order()
-    {
-
-
-    }
-
 }
