@@ -2,12 +2,14 @@ package deepskyblue.povertycrack;
 
 import android.app.IntentService;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Iterator;
 
@@ -36,9 +38,10 @@ public class StatisticsReader extends IntentService
         Workbook workbook = null;
         try
         {
-            BufferedReader br = new BufferedReader(new
-                    InputStreamReader(getAssets().open("statistics.xlsx")));
-            workbook = WorkbookFactory.create(new File("assets//statistics.xlsx"));
+            AssetManager am = getApplicationContext().getAssets();
+            InputStream is = am.open("statistics.xlsx");
+
+            workbook = WorkbookFactory.create(is);
         } catch (IOException e)
         {
             e.printStackTrace();
