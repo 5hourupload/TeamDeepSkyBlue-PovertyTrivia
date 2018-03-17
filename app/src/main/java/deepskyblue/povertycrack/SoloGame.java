@@ -11,6 +11,11 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import static deepskyblue.povertycrack.MainActivity.checkAllQuestions;
+import static deepskyblue.povertycrack.MainActivity.multChoiceQuestions;
+import static deepskyblue.povertycrack.MainActivity.sliderQuestions;
+import static deepskyblue.povertycrack.MainActivity.trueFalseQuestions;
+
 public class SoloGame extends AppCompatActivity {
     private int count = 0;
     @Override
@@ -26,21 +31,21 @@ public class SoloGame extends AppCompatActivity {
     private Question currentQuestion;
     private void newQuestion(){
         count++;
-//        currentQuestion = new Question(count, passedQ, passedA, false);
-//        switch ((int) (Math.random() * 4)){
-//            case 0:
-//
-//                highLow(passedQ, passedA);
-//                break;
-//            case 1:
-//                multipleChoice(passedQ, passedA);
-//                break;
-//            case 2:
-//                slider(passedQ, passedA);
-//                break;
-//            case 3:
-//                checkAll(passedQ, passedA);
-//                break;
+        currentQuestion = new Question(count, passedQ, passedA, false);
+        switch ((int) (Math.random() * 4)){
+            case 0:
+                highLow(trueFalseQuestions.pop());
+                break;
+            case 1:
+
+                multipleChoice(multChoiceQuestions.pop());
+                break;
+            case 2:
+                slider(sliderQuestions.pop());
+                break;
+            case 3:
+                checkAll(checkAllQuestions.pop());
+                break;
 //        }
     }
     //Check functions for each type of question
@@ -73,9 +78,9 @@ public class SoloGame extends AppCompatActivity {
         results.add(currentQuestion);
     }
     //Function called for a true or false question
-    private void highLow(String question, final String answer){
+    private void highLow(Question question){
         TextView Q = findViewById(R.id.questionText);
-        Q.setText(question);
+        Q.setText(question.question);
         Button True = findViewById(R.id.buttonTrue);
         //sets up onclick listeners for both buttons that call the check function above
         True.setOnClickListener(new View.OnClickListener() {

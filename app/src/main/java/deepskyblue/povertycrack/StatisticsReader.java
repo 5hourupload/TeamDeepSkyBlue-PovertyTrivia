@@ -56,6 +56,31 @@ public class StatisticsReader extends AppCompatActivity
         }
     }
 
+    private void generateQuestions(){
+        AssetManager am = getApplicationContext().getAssets();
+        InputStream is = null;
+        Workbook wb = null;
+        try
+        {
+            is = am.open("statistics.xls");
+            wb = Workbook.getWorkbook(is);
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        } catch (BiffException e)
+        {
+            e.printStackTrace();
+        }
+        Sheet s = wb.getSheet(0);
+        //System.out.println(s.getCell(0,0).getContents());
+        int rows = s.getRows();
+
+        for(int i = 0; i < rows; i ++){
+            String q = "In " + s.getCell(0,i).getContents() + ", was the " + s.getCell(1,i).getContents() + " for " + s.getCell(2,i).getContents() + s.getCell(3,i) + "?";
+            
+        }
+    }
+
     public void order()
     {
 
