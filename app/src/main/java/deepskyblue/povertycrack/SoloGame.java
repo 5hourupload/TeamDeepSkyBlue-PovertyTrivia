@@ -2,7 +2,9 @@ package deepskyblue.povertycrack;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -16,10 +18,17 @@ import static deepskyblue.povertycrack.MainActivity.trueFalseQuestions;
 
 public class SoloGame extends AppCompatActivity {
     private int count = 0;
+    ConstraintLayout tf;
+    ConstraintLayout mc;
+    ConstraintLayout sl;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.questionbox_template);
+        tf = findViewById(R.id.tf_view);
+        mc = findViewById(R.id.mc_view);
+        sl = findViewById(R.id.slider_view);
+        trueFalseQuestions.add(new Question(-1, "What?", "True", " ", false));
         newQuestion();
     }
 
@@ -30,7 +39,7 @@ public class SoloGame extends AppCompatActivity {
     private void newQuestion(){
         count++;
         //currentQuestion = new Question(count, passedQ, passedA, false);
-        switch ((int) (Math.random() * 3)){
+        switch ((int) (Math.random() * 1)){
             case 0:
                 currentQuestion = trueFalseQuestions.pop();
                 currentQuestion.num = count;
@@ -74,6 +83,10 @@ public class SoloGame extends AppCompatActivity {
     private void highLow(final Question question){
         TextView Q = findViewById(R.id.questionText);
         Q.setText(question.question);
+
+        tf.setVisibility(View.VISIBLE);
+        mc.setVisibility(View.INVISIBLE);
+        sl.setVisibility(View.INVISIBLE);
         Button True = findViewById(R.id.buttonTrue);
         //sets up onclick listeners for both buttons that call the check function above
         True.setOnClickListener(new View.OnClickListener() {
@@ -94,8 +107,12 @@ public class SoloGame extends AppCompatActivity {
     private void multipleChoice(final Question question){
         TextView Q = findViewById(R.id.questionText);
         Q.setText(question.question);
-        final String [] Answers = question.answer.split(";");
-        String correctAnswerTemp = "";
+        tf.setVisibility(View.INVISIBLE);
+        mc.setVisibility(View.VISIBLE);
+        sl.setVisibility(View.INVISIBLE);
+
+        String [] Answers = question.answer.split(";");
+        String correctAnswerTemp = question.answer;
         for(int i = 0; i < 4; i++){
             if(Answers[i].charAt(0) == 'C'){
                 correctAnswerTemp = Answers[i];
@@ -139,6 +156,9 @@ public class SoloGame extends AppCompatActivity {
     private void slider(final Question question) {
         TextView Q = findViewById(R.id.questionText);
         Q.setText(question.question);
+        tf.setVisibility(View.INVISIBLE);
+        mc.setVisibility(View.INVISIBLE);
+        sl.setVisibility(View.VISIBLE);
         final SeekBar slider = findViewById(R.id.slider);
         //int newMax = (int)(Integer.parseInt(Answer) + (Integer.parseInt(Answer) * Math.random()));
         //slider.setMax(newMax);
@@ -150,4 +170,5 @@ public class SoloGame extends AppCompatActivity {
             }
         });
     }
+
 }
