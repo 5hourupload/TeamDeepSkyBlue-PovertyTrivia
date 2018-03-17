@@ -28,16 +28,16 @@
 
             <Button
                 android:id="@+id/questionOption1"
-                android:layout_width="@dimen/buttonWidth"
-                android:layout_height="@dimen/buttonHeight"
+                android:layout_width="@dimen/buttonWidthMC180"
+                android:layout_height="@dimen/buttonHeightStandard100"
                 android:text="Option1"
                 tools:layout_editor_absoluteX="28dp"
                 tools:layout_editor_absoluteY="212dp" />
 
             <Button
                 android:id="@+id/questionOption2"
-                android:layout_width="@dimen/buttonWidth"
-                android:layout_height="@dimen/buttonHeight"
+                android:layout_width="@dimen/buttonWidthMC180"
+                android:layout_height="@dimen/buttonHeightStandard100"
                 android:text="Option2"
                 tools:layout_editor_absoluteX="28dp"
                 tools:layout_editor_absoluteY="212dp" />
@@ -52,16 +52,16 @@
 
             <Button
                 android:id="@+id/questionOption3"
-                android:layout_width="@dimen/buttonWidth"
-                android:layout_height="@dimen/buttonHeight"
+                android:layout_width="@dimen/buttonWidthMC180"
+                android:layout_height="@dimen/buttonHeightStandard100"
                 android:text="Option3"
                 tools:layout_editor_absoluteX="28dp"
                 tools:layout_editor_absoluteY="212dp" />
 
             <Button
                 android:id="@+id/questionOption4"
-                android:layout_width="@dimen/buttonWidth"
-                android:layout_height="@dimen/buttonHeight"
+                android:layout_width="@dimen/buttonWidthMC180"
+                android:layout_height="@dimen/buttonHeightStandard100"
                 android:text="Option 4"
                 tools:layout_editor_absoluteX="28dp"
                 tools:layout_editor_absoluteY="212dp" />
