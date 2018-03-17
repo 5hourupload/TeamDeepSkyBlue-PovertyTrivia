@@ -49,7 +49,16 @@ public class MainActivity extends AppCompatActivity
                 startActivity(newIntent);
             }
         });
-
+        TextView d = findViewById(R.id.dykFact);
+        d.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent newIntent = new Intent(MainActivity.this, StatisticsReader.class);
+                startActivity(newIntent);
+            }
+        });
 
 
     }

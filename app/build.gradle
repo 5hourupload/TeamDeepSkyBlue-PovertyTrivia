@@ -30,5 +30,6 @@ dependencies {
     compile('org.apache.poi:poi-ooxml:3.12') {
         exclude group: 'stax', module: 'stax-api'
     }
-    implementation files('libs/jxl.jar')
+    compile files('libs/J-Excel-1.0-SNAPSHOT.jar')
+    implementation files('libs/J-Excel-1.0-SNAPSHOT.jar')
 }
