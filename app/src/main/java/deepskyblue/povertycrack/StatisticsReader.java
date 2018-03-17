@@ -8,6 +8,7 @@ import android.os.Bundle;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -38,11 +39,24 @@ public class StatisticsReader extends IntentService
         Workbook workbook = null;
         try
         {
-            AssetManager am = getApplicationContext().getAssets();
-            InputStream is = am.open("statistics.xlsx");
+//            AssetManager am = getApplicationContext().getAssets();
+//            InputStream is = am.open("statistics.xlsx");
+
+            File f = new File(getCacheDir()+"/Introduction.pdf");
+            if (!f.exists())
+                try {
+
+                    InputStream is = getAssets().open("statistics.xlsx");
+                    byte[] buffer = new byte[1024];
+                    is.read(buffer);
+                    is.close();
 
 
-            workbook = WorkbookFactory.create(is);
+                    FileOutputStream fos = new FileOutputStream(f);
+                    fos.write(buffer);
+                    fos.close();
+                } catch (Exception e) { throw new RuntimeException(e); }
+            workbook = WorkbookFactory.create(f);
         } catch (IOException e)
         {
             e.printStackTrace();
