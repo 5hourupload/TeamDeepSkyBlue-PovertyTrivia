@@ -29,6 +29,7 @@ public class SoloGame extends AppCompatActivity {
         mc = findViewById(R.id.mc_view);
         sl = findViewById(R.id.slider_view);
         trueFalseQuestions.add(new Question(-1, "What?", "True", " ", false));
+        multChoiceQuestions.add(new Question(-1, "What?", "63893", " ", false));
         newQuestion();
     }
 
@@ -61,23 +62,23 @@ public class SoloGame extends AppCompatActivity {
     //Parameters include the selected answer compared to the correct answer
     private void checkTF(String selectedA, Question question){
         if(selectedA.equals(question.answer)){
-            currentQuestion.correct = true;
+            question.correct = true;
         }
-        results.add(currentQuestion);
+        results.add(question);
     }
 
-    private void checkMC(String selectedA, Question question){
-        if(selectedA.equals(question.answer)){
-            currentQuestion.correct = true;
+    private void checkMC(int selectedA, Question question){
+        if(selectedA == Integer.parseInt(question.answer)){
+            question.correct = true;
         }
-        results.add(currentQuestion);
+        results.add(question);
     }
 
     private void checkS(int sliderSelection, Question question){
         if(sliderSelection == Integer.parseInt(question.answer)){
-            currentQuestion.correct = true;
+            question.correct = true;
         }
-        results.add(currentQuestion);
+        results.add(question);
     }
     //Function called for a true or false question
     private void highLow(final Question question){
@@ -111,44 +112,46 @@ public class SoloGame extends AppCompatActivity {
         mc.setVisibility(View.VISIBLE);
         sl.setVisibility(View.INVISIBLE);
 
-        String [] Answers = question.answer.split(";");
-        String correctAnswerTemp = question.answer;
+        int[] Answers = new int[4];
+        int correctAnswerTemp = Integer.parseInt(question.answer);
+        int random = (int) (Math.random() * correctAnswerTemp);
+        Answers[random] = correctAnswerTemp;
         for(int i = 0; i < 4; i++){
-            if(Answers[i].charAt(0) == 'C'){
-                correctAnswerTemp = Answers[i];
-            }
+            if (i == random) continue;
+            Answers[i] = correctAnswerTemp + ((int) (Math.random() * 10) - 5) * 5000;
         }
-        final String correctAnswer = correctAnswerTemp;
+        //final String correctAnswer = correctAnswerTemp;
+        final int[] finalAnswers = Answers;
         Button buttonOption1 = findViewById(R.id.questionOption1);
-        buttonOption1.setText(Answers[0].substring(2));
+        buttonOption1.setText(Answers[0]);
         buttonOption1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkMC(Answers[0].substring(2), question);
+                checkMC(finalAnswers[0], question);
             }
         });
         Button buttonOption2 = findViewById(R.id.questionOption2);
-        buttonOption2.setText(Answers[1].substring(2));
+        buttonOption2.setText(Answers[1]);
         buttonOption1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkMC(Answers[1].substring(2), question);
+                checkMC(finalAnswers[1], question);
             }
         });
         Button buttonOption3 = findViewById(R.id.questionOption3);
-        buttonOption3.setText(Answers[2].substring(2));
+        buttonOption3.setText(Answers[2]);
         buttonOption1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkMC(Answers[2].substring(2), question);
+                checkMC(finalAnswers[2], question);
             }
         });
         Button buttonOption4 = findViewById(R.id.questionOption4);
-        buttonOption4.setText(Answers[3].substring(2));
+        buttonOption4.setText(Answers[3]);
         buttonOption1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkMC(Answers[3].substring(2), question);
+                checkMC(finalAnswers[3], question);
             }
         });
     }
