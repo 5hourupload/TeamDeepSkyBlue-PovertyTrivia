@@ -15,73 +15,9 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        Intent statisticsReader = new Intent(this, StatisticsReader.class);
-        startService(statisticsReader);
-
-    }
-
-    private void startSolo(){
-
-    }
-
-
-=======
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-        Intent statisticsReader = new Intent(this, StatisticsReader.class);
-        startService(statisticsReader);
-=======
->>>>>>> a6760aa421f4f87c9443f428c3a4cff36ac2af68
-=======
->>>>>>> 6e8e7d4174e2eae8d4cf90cf7abf07ee8cd328d7
         final TextView Q = findViewById(R.id.questionBox);
         String test = "how many people were on food stamps in 2015?";
         Q.setText(test);
-        String answer1 = "100,000";
-        String answer2 = "200,000";
-        String answer3 = "300,000";
-        String answer4 = "400,000";
-        Button choice1 = findViewById(R.id.option1);
-        choice1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String response = "you couldn't be more wrong";
-                Q.setText(response);
-            }
-        });
-        choice1.setText(answer1);
-        Button choice2 = findViewById(R.id.option2);
-        choice2.setText(answer2);
-        choice2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String response = "Just roll over please";
-                Q.setText(response);
-            }
-        });
-        Button choice3 = findViewById(R.id.option3);
-        choice3.setText(answer3);
-        choice3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String response = "Wrong";
-                Q.setText(response);
-            }
-        });
-        Button choice4 = findViewById(R.id.option4);
-        choice4.setText(answer4);
-        choice4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String response = "It's even more than that";
-                Q.setText(response);
-            }
-        });
     }
 
     private void startSolo(){
@@ -98,10 +34,6 @@ public class MainActivity extends AppCompatActivity
     private void checkAll(String question, String Answer){
         TextView Q = findViewById(R.id.questionBox);
         String Answers [] = Answer.split(";");
-        Button choice1 = findViewById(R.id.option1);
-        Button choice2 = findViewById(R.id.option2);
-        Button choice3 = findViewById(R.id.option3);
-        Button choice4 = findViewById(R.id.option4);
 
     }
 
@@ -115,10 +47,4 @@ public class MainActivity extends AppCompatActivity
         TextView Q = findViewById(R.id.questionText);
         Q.setText(Question);
     }
-<<<<<<< HEAD
-
-    Intent myIntent = new Intent()
->>>>>>> 8dda53975b1011c03f80ffd076248478d9e52e7c
-=======
->>>>>>> 6e8e7d4174e2eae8d4cf90cf7abf07ee8cd328d7
 }
