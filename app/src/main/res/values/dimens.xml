@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="margin">10dp</dimen>
+    <dimen name="buttonWidth">180dp</dimen>
+    <dimen name="buttonHeight">100dp</dimen>
 </resources>
