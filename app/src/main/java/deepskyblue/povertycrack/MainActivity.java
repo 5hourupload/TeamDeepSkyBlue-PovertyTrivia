@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity
         final TextView Q = findViewById(R.id.questionBox);
         String test = "how many people were on food stamps in 2015?";
         Q.setText(test);
+        Intent newIntent = new Intent(this, StatisticsReader.class);
+        startService(newIntent);
     }
 
     private void startSolo(){
