@@ -27,5 +27,17 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         layout="@layout/multiplechoice_template"/>
+    <include
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        layout="@layout/selectall_template"/>
+    <include
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        layout="@layout/slider_template"/>
+    <include
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        layout="@layout/truefalse_template"/>
 
 </android.support.constraint.ConstraintLayout>
