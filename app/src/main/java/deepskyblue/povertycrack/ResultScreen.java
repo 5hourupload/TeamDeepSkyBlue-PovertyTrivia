@@ -19,7 +19,8 @@ public class ResultScreen extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.resultscreen);
 
-        String[] questions = {"Why x", "How y", "When z", "What q", "Who w"};
+        Question[] questions = new Question[5];
+        questions[0] = questions.question; //some static
         ListAdapter queAdapter = new CustomAdapter(this, questions);
         ListView myListView = (ListView) findViewById(R.id.myListView);
         myListView.setAdapter(queAdapter);
