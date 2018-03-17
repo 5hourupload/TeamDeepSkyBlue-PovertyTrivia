@@ -1,5 +1,6 @@
 package deepskyblue.povertycrack;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,9 +20,10 @@ public class ResultScreen extends AppCompatActivity
         setContentView(R.layout.resultscreen);
 
         String[] questions = {"Why x", "How y", "When z", "What q", "Who w"};
-        ListAdapter queAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, questions);
+        ListAdapter queAdapter = new CustomAdapter(this, questions);
         ListView myListView = (ListView) findViewById(R.id.myListView);
         myListView.setAdapter(queAdapter);
+
 
         myListView.setOnItemClickListener(
                 new AdapterView.OnItemClickListener()
@@ -31,10 +33,16 @@ public class ResultScreen extends AppCompatActivity
                     {
                         String question = String.valueOf(parent.getItemAtPosition(position));
                         Toast.makeText(ResultScreen.this, question, Toast.LENGTH_LONG).show();
-
+                        //when clicked displays answer to the question
+//                        sendMessage();
                     }
                 }
         );
+    }
+
+    public void sendMessage(View view)
+    {
+//        Intent intent = new Intent(this)
     }
 
 

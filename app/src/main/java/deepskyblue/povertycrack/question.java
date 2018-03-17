@@ -4,7 +4,7 @@ package deepskyblue.povertycrack;
  * Created by Charley Bickel on 3/17/2018.
  */
 
-public class Question {
+class Question {
     private int num;
     private String question;
     private String answer;
