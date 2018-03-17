@@ -9,7 +9,7 @@ public class Question {
     private String question;
     private String answer;
     protected boolean correct;
-    
+
     public Question(int num, String question, String answer, boolean correct){
         this.num = num;
         this.question = question;
