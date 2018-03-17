@@ -41,6 +41,7 @@ public class StatisticsReader extends IntentService
             AssetManager am = getApplicationContext().getAssets();
             InputStream is = am.open("statistics.xlsx");
 
+
             workbook = WorkbookFactory.create(is);
         } catch (IOException e)
         {
