@@ -17,29 +17,31 @@ public class SoloGame extends AppCompatActivity {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.questionbox_template);
+        newQuestion();
     }
 
     //every new question that is called in main calls this method
     //This method calls the appropriate method to execute the question
     private ArrayList<Object> results = new ArrayList<>();
     private Question currentQuestion;
-    private void newQuestion(String passedQ, String passedA){
+    private void newQuestion(){
         count++;
-        currentQuestion = new Question(count, passedQ, passedA, false);
-        switch (passedQ.charAt(0)){
-            case 'T':
-                highLow(passedQ, passedA);
-                break;
-            case 'M':
-                multipleChoice(passedQ, passedA);
-                break;
-            case 'S':
-                slider(passedQ, passedA);
-                break;
-            case 'C':
-                checkAll(passedQ, passedA);
-                break;
-        }
+//        currentQuestion = new Question(count, passedQ, passedA, false);
+//        switch ((int) (Math.random() * 4)){
+//            case 0:
+//
+//                highLow(passedQ, passedA);
+//                break;
+//            case 1:
+//                multipleChoice(passedQ, passedA);
+//                break;
+//            case 2:
+//                slider(passedQ, passedA);
+//                break;
+//            case 3:
+//                checkAll(passedQ, passedA);
+//                break;
+//        }
     }
     //Check functions for each type of question
     //Parameters include the selected answer compared to the correct answer
