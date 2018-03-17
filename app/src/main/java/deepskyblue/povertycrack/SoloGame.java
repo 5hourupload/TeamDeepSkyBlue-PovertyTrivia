@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -23,10 +24,10 @@ public class SoloGame extends AppCompatActivity {
     //every new question that is called in main calls this method
     //This method calls the appropriate method to execute the question
     private ArrayList<Object> results = new ArrayList<>();
-
+    private question currentQuestion;
     private void newQuestion(String passedQ, String passedA){
         count++;
-        question currentQuestion = new question(count, passedQ, passedA, false);
+        currentQuestion = new question(count, passedQ, passedA, false);
         switch (passedQ.charAt(0)){
             case 'T':
                 highLow(passedQ, passedA);
@@ -45,8 +46,9 @@ public class SoloGame extends AppCompatActivity {
 
     private void checkAnswer(String selectedA, String correctA){
         if(selectedA.equals(correctA)){
-            
+            currentQuestion.correct = true;
         }
+        results.add(currentQuestion);
     }
 
     private void highLow(String question, final String answer){
@@ -71,7 +73,7 @@ public class SoloGame extends AppCompatActivity {
     private void checkAll(String question, String Answer){
         TextView Q = findViewById(R.id.questionText);
         String Answers [] = Answer.split(";");
-
+        CheckBox Option1 = findViewById(R.id.checkboxOption1)
     }
 
     private void multipleChoice(String question, String answer){

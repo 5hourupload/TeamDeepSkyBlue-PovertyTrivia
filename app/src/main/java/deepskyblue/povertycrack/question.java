@@ -8,7 +8,7 @@ public class question {
     private int num;
     private String question;
     private String answer;
-    private boolean correct;
+    protected boolean correct;
     public question(int a, String b, String c, boolean d){
         num = a;
         question = b;
