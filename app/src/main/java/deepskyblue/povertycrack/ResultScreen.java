@@ -20,7 +20,16 @@ public class ResultScreen extends AppCompatActivity
         setContentView(R.layout.resultscreen);
 
         Question[] questions = new Question[5];
-        questions[0] = questions.question; //some static
+        questions[0].question = "I";
+        questions[0].correct = true;
+        questions[1].question = "Suck";
+        questions[1].correct = false;
+        questions[2].question = "at";
+        questions[2].correct = true;
+        questions[3].question = "coding";
+        questions[3].correct = false;
+        questions[4].question = "!";
+        questions[4].correct = true;
         ListAdapter queAdapter = new CustomAdapter(this, questions);
         ListView myListView = (ListView) findViewById(R.id.myListView);
         myListView.setAdapter(queAdapter);
