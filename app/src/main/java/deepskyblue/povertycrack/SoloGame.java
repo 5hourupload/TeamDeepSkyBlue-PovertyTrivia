@@ -1,6 +1,8 @@
 package deepskyblue.povertycrack;
 
+import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class SoloGame extends MainActivity {
@@ -23,12 +25,15 @@ public class SoloGame extends MainActivity {
         }
     }
 
+    public void onClick(View selection){
+
+    }
+
     private void highLow(String question, String answer){
         TextView Q = findViewById(R.id.questionText);
         Q.setText(question);
         Button True = findViewById(R.id.buttonTrue);
         Button False = findViewById(R.id.buttonFalse);
-
     }
 
     private void checkAll(String question, String Answer){
@@ -47,5 +52,13 @@ public class SoloGame extends MainActivity {
     private void slider(String Question, String Answer) {
         TextView Q = findViewById(R.id.questionText);
         Q.setText(Question);
+    }
+
+    private void correctAnswer(){
+
+    }
+
+    private void wrongAnswer(){
+
     }
 }
