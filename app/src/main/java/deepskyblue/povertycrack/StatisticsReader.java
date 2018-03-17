@@ -76,20 +76,28 @@ public class StatisticsReader extends AppCompatActivity
         }
         Sheet s = wb.getSheet(0);
         int rows = s.getRows();
+        int cols = s.getColumns();
 
-        for(int i = 0; i < rows; i ++){
+        for(int i = 0; i < rows; i++){
             String year = s.getCell(0,i).getContents();
             String type = s.getCell(1,i).getContents();
-            String group = s.getCell(2,i).getContents();
-            String value = s.getCell(3,i).getContents();
-            String q = "True or False: In " +year+ ", the " + type + " for " + group + "was" + value + "?";
+            String group = s.getCell(0,i).getContents();
+            int questionType = (int)(Math.random() * 3) + 1;
+            switch (questionType){
+                case 1:
+                    generateTrueFalse();
+            }
         }
+
+        generateTrueFalse(s.getCell(0,));
     }
 
     private void generateTrueFalse(String year, String type, String group, String value){
         Random r = new Random();
-        boolean r.nextBoolean();
-        int trueorfalse = (int)Math.random();
+        boolean TorF = r.nextBoolean();
+        if(TorF){
+            String q =
+        }
         String q = "True or False: In " +year+
     }
 
