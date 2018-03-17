@@ -18,7 +18,7 @@ public class SoloGame extends AppCompatActivity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.background_template);
+        setContentView(R.layout.questionbox_template);
     }
 
     //every new question that is called in main calls this method
@@ -83,7 +83,13 @@ public class SoloGame extends AppCompatActivity {
         Option4.setText(Answers[3]);
         CheckBox Option5 = findViewById(R.id.checkboxOption5);
         Option5.setText(Answers[4]);
+        Button submit = findViewById(R.id.submitButton);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+            }
+        });
     }
 
     private void multipleChoice(String question, String answer){
