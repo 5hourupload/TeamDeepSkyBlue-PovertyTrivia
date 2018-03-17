@@ -41,7 +41,8 @@ public class SoloGame extends AppCompatActivity {
                 break;
         }
     }
-
+    //Check functions for each type of question
+    //Parameters include the selected answer compared to the correct answer
     private void checkTF(String selectedA, String correctA){
         if(selectedA.equals(correctA)){
             currentQuestion.correct = true;
@@ -69,11 +70,12 @@ public class SoloGame extends AppCompatActivity {
         }
         results.add(currentQuestion);
     }
-
+    //Function called for a true or false question
     private void highLow(String question, final String answer){
         TextView Q = findViewById(R.id.questionText);
         Q.setText(question);
         Button True = findViewById(R.id.buttonTrue);
+        //sets up onclick listeners for both buttons that call the check function above
         True.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
