@@ -2,6 +2,7 @@ package deepskyblue.povertycrack;
 
 import android.content.Intent;
 import android.content.res.AssetManager;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //URL list of helpful sites related to poverty
-        LinkedList<String> urlList = new LinkedList<>();
+        final LinkedList<String> urlList = new LinkedList<>();
 
         BufferedReader urlReader = null;
         try {
@@ -90,8 +91,17 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 //        System.out.println(urlList);
-        double randomURL = Math.random()* urlList.size();
+        final double randomURL = Math.random()* urlList.size();
         TextView urlTextView = (TextView) findViewById(R.id.factURL);
         urlTextView.setText(urlList.get((int)randomURL));
+        urlTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent browserIntent = new Intent(
+                        Intent.ACTION_VIEW,
+                        Uri.parse(urlList.get((int) randomURL)));
+                startActivity(browserIntent);
+            }
+        });
     }
 }
