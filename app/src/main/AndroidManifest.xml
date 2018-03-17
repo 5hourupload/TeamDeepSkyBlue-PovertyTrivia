@@ -17,8 +17,6 @@
         <activity android:name=".SoloGame">
 
         </activity>
-        <service android:name="deepskyblue.povertycrack.StatisticsReader">
-            android:enabled="true"
-        </service>
+
     </application>
 </manifest>
