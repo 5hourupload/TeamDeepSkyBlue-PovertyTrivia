@@ -23,6 +23,12 @@ import java.util.LinkedList;
 
 public class MainActivity extends AppCompatActivity {
 
+    static LinkedList<Question> multChoiceQuestions = new LinkedList<>();
+    static LinkedList<Question> trueFalseQuestions = new LinkedList<>();
+    static LinkedList<Question> sliderQuestions = new LinkedList<>();
+    static LinkedList<Question> checkAllQuestions = new LinkedList<>();
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
