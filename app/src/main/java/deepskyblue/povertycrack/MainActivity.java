@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         BufferedReader urlReader = null;
         try {
             urlReader = new BufferedReader(
-                    new InputStreamReader(getAssets().open("filename.txt")));
+                    new InputStreamReader(getAssets().open("URLs.txt")));
 
             // do reading, usually loop until end of file reading
             String mLine;
