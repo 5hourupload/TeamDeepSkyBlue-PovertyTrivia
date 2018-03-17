@@ -4,9 +4,11 @@ import android.app.IntentService;
 import android.content.Intent;
 import android.os.Bundle;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Iterator;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -34,6 +36,8 @@ public class StatisticsReader extends IntentService
         Workbook workbook = null;
         try
         {
+            BufferedReader br = new BufferedReader(new
+                    InputStreamReader(getAssets().open("statistics.xlsx")));
             workbook = WorkbookFactory.create(new File("assets//statistics.xlsx"));
         } catch (IOException e)
         {
