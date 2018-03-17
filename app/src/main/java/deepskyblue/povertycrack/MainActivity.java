@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         final TextView Q = findViewById(R.id.questionBox);
         String test = "how many people were on food stamps in 2015?";
         Q.setText(test);
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity
         choice3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String response = "Wrong again";
+                String response = "Wrong";
                 Q.setText(response);
             }
         });
@@ -70,7 +72,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    private void checkAll(String Question, String Answer){
+    private void checkAll(String question, String Answer){
         TextView Q = findViewById(R.id.questionBox);
         String Answers [] = Answer.split(";");
         Button choice1 = findViewById(R.id.option1);
@@ -80,12 +82,15 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    private void multipleChoice(String Question, String Answer){
-        
+    private void multipleChoice(String question, String answer){
+        TextView Q = findViewById(R.id.questionText);
+        Q.setText(question);
 
     }
 
-    private void slider(String Questions){
+    private void slider(String Question, String Answer){
+        TextView Q = findViewById(R.id.questionText);
+        Q.setText(Question);
 
     }
 }
