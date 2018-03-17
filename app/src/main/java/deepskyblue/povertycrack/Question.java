@@ -10,12 +10,14 @@ class Question {
     private int num;
     private String question;
     private String answer;
+    private String completeFact;
     protected boolean correct;
 
-    public Question(int num, String question, String answer, boolean correct){
+    public Question(int num, String question, String answer, String completeFact, boolean correct){
         this.num = num;
         this.question = question;
         this.answer = answer;
+        this.completeFact = completeFact;
         this.correct = correct;
     }
 }

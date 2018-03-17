@@ -18,6 +18,8 @@ import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 
+import static deepskyblue.povertycrack.MainActivity.multChoiceQuestions;
+
 
 public class StatisticsReader extends AppCompatActivity
 {
@@ -72,13 +74,20 @@ public class StatisticsReader extends AppCompatActivity
             e.printStackTrace();
         }
         Sheet s = wb.getSheet(0);
-        //System.out.println(s.getCell(0,0).getContents());
         int rows = s.getRows();
 
         for(int i = 0; i < rows; i ++){
-            String q = "In " + s.getCell(0,i).getContents() + ", was the " + s.getCell(1,i).getContents() + " for " + s.getCell(2,i).getContents() + s.getCell(3,i) + "?";
-            
+            String year = s.getCell(0,i).getContents();
+            String type = s.getCell(1,i).getContents();
+            String group = s.getCell(2,i).getContents();
+            String value = s.getCell(3,i).getContents();
+            String q = "True or False: In " +year+ ", the " + type + " for " + group + "was" + value + "?";
         }
+    }
+
+    private void generateTrueFalse(String year, String type, String group, String value){
+        int (int)Math.random();
+        String q = "True or False: In " +year+
     }
 
     public void order()
