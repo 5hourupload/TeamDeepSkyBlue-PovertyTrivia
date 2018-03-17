@@ -73,7 +73,11 @@ public class SoloGame extends AppCompatActivity {
     private void checkAll(String question, String Answer){
         TextView Q = findViewById(R.id.questionText);
         String Answers [] = Answer.split(";");
-        CheckBox Option1 = findViewById(R.id.checkboxOption1)
+        CheckBox Option1 = findViewById(R.id.checkboxOption1);
+        CheckBox Option2 = findViewById(R.id.checkboxOption2);
+        CheckBox Option3 = findViewById(R.id.checkboxOption3);
+        CheckBox Option4 = findViewById(R.id.checkboxOption4);
+        CheckBox Option5 = findViewById(R.id.checkboxOption5);
     }
 
     private void multipleChoice(String question, String answer){
