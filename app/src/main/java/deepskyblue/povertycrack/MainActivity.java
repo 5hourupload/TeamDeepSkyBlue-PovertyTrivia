@@ -20,6 +20,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.util.LinkedList;
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //URL list of helpful sites related to poverty
         LinkedList<String> urlList = new LinkedList<>();
 
         BufferedReader urlReader = null;
@@ -87,6 +89,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-        System.out.println(urlList);
+//        System.out.println(urlList);
+        double randomURL = Math.random()* urlList.size();
+        TextView urlTextView = (TextView) findViewById(R.id.factURL);
+        urlTextView.setText(urlList.get((int)randomURL));
     }
 }
