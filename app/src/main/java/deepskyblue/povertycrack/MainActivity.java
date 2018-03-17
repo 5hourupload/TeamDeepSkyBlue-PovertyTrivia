@@ -15,15 +15,6 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
-
-
-=======
-<<<<<<< HEAD
-        Intent statisticsReader = new Intent(this, StatisticsReader.class);
-        startService(statisticsReader);
-=======
->>>>>>> a6760aa421f4f87c9443f428c3a4cff36ac2af68
         final TextView Q = findViewById(R.id.questionBox);
         String test = "how many people were on food stamps in 2015?";
         Q.setText(test);
@@ -96,12 +87,8 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    private void slider(String Question, String Answer){
+    private void slider(String Question, String Answer) {
         TextView Q = findViewById(R.id.questionText);
         Q.setText(Question);
-
->>>>>>> 4b98b3bfec18391fa5e452535f7e43d0568fe5a8
     }
-
-    Intent myIntent = new Intent()
 }
