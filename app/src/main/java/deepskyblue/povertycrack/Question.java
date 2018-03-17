@@ -6,19 +6,12 @@ package deepskyblue.povertycrack;
  * It creates objects with member variables that correspond to the question attributes
  */
 
-class Question {
-<<<<<<< HEAD
+public class Question {
     private int num;
     private String question;
     private String answer;
     private String completeFact;
     protected boolean correct;
-=======
-    public int num;
-    public String question;
-    public String answer;
-    public boolean correct;
->>>>>>> e1d0e33d7c92028f786392b98d05354529e2b1b2
 
     public Question(int num, String question, String answer, String completeFact, boolean correct){
         this.num = num;
