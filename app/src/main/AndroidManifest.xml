@@ -19,6 +19,8 @@
         </activity>
         <activity android:name=".StatisticsReader">
         </activity>
+        <activity android:name=".ResultScreen">
+        </activity>
 
     </application>
 </manifest>
