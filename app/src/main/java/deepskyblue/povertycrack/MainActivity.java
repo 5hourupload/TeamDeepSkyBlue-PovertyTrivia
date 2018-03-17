@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.content.res.AssetManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -23,8 +25,19 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Intent newIntent = new Intent(this, StatisticsReader.class);
-        startActivity(newIntent);
+        //Intent newIntent = new Intent(this, StatisticsReader.class);
+        //startActivity(newIntent);
+
+        Button buttonSolo = findViewById(R.id.buttonSolo);
+        buttonSolo.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent newIntent = new Intent(MainActivity.this, SoloGame.class);
+                startActivity(newIntent);
+            }
+        });
 
 
 
