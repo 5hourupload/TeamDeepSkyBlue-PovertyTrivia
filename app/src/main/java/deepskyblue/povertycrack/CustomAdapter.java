@@ -33,6 +33,7 @@ class CustomAdapter extends ArrayAdapter<Question>
         if (singleQuestionItem.correct)
         {
             myImage.setImageResource(R.drawable.checkmark);
+            return customView;
         }
         else
         {
