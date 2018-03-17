@@ -1,14 +1,29 @@
 package deepskyblue.povertycrack;
 
+import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class SoloGame extends MainActivity {
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Map;
+
+public class SoloGame extends AppCompatActivity {
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
+
     //every new question that is called in main calls this method
     //This method calls the appropriate method to execute the question
+    private ArrayList<Object> results = new ArrayList<>();
     private void newQuestion(String passedQ, String passedA){
+
         switch (passedQ.charAt(0)){
             case 'T':
                 highLow(passedQ, passedA);
@@ -25,19 +40,33 @@ public class SoloGame extends MainActivity {
         }
     }
 
-    public void onClick(View selection){
-
+    private void checkAnswer(String selectedA, String correctA){
+        if(selectedA.equals(correctA)){
+            ;
+        }
     }
 
-    private void highLow(String question, String answer){
+    private void highLow(String question, final String answer){
         TextView Q = findViewById(R.id.questionText);
         Q.setText(question);
         Button True = findViewById(R.id.buttonTrue);
+        True.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkAnswer("true", answer);
+            }
+        });
         Button False = findViewById(R.id.buttonFalse);
+        False.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                checkAnswer("false", answer);
+            }
+        });
     }
 
     private void checkAll(String question, String Answer){
-        TextView Q = findViewById(R.id.questionBox);
+        TextView Q = findViewById(R.id.questionText);
         String Answers [] = Answer.split(";");
 
     }
