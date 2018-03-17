@@ -3,11 +3,14 @@ package deepskyblue.povertycrack;
 import android.widget.TextView;
 
 public class SoloGame extends MainActivity {
+    private void startSolo(){
+        
+    }
+
     private void highLow(String Question, String Answer){
         TextView Q = findViewById(R.id.questionBox);
-        String test = "how many people were on food stamps in 2015?";
+        String test = "";
         Q.setText(test);
-
     }
 
     private void checkAll(String question, String Answer){
