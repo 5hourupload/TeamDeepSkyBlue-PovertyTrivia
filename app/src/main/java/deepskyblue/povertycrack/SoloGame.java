@@ -28,6 +28,7 @@ public class SoloGame extends MainActivity {
         Q.setText(question);
         Button True = findViewById(R.id.buttonTrue);
         Button False = findViewById(R.id.buttonFalse);
+
     }
 
     private void checkAll(String question, String Answer){
