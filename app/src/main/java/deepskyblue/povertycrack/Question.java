@@ -7,11 +7,11 @@ package deepskyblue.povertycrack;
  */
 
 public class Question {
-    private int num;
-    private String question;
-    private String answer;
-    private String completeFact;
-    protected boolean correct;
+    public int num;
+    public String question;
+    public String answer;
+    public String completeFact;
+    public boolean correct;
 
     public Question(int num, String question, String answer, String completeFact, boolean correct){
         this.num = num;

@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.sql.SQLOutput;
 import java.util.LinkedList;
+import java.util.Random;
 
 import jxl.Cell;
 import jxl.Sheet;
@@ -86,7 +87,9 @@ public class StatisticsReader extends AppCompatActivity
     }
 
     private void generateTrueFalse(String year, String type, String group, String value){
-        int (int)Math.random();
+        Random r = new Random();
+        boolean r.nextBoolean();
+        int trueorfalse = (int)Math.random();
         String q = "True or False: In " +year+
     }
 
