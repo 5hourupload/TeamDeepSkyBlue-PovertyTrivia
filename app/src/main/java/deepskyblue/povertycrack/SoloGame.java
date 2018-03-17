@@ -1,5 +1,6 @@
 package deepskyblue.povertycrack;
 
+import android.content.Intent;
 import android.widget.TextView;
 
 public class SoloGame extends MainActivity {
