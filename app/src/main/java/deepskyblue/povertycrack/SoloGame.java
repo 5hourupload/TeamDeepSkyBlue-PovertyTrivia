@@ -5,13 +5,11 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import static deepskyblue.povertycrack.MainActivity.checkAllQuestions;
 import static deepskyblue.povertycrack.MainActivity.multChoiceQuestions;
 import static deepskyblue.povertycrack.MainActivity.sliderQuestions;
 import static deepskyblue.povertycrack.MainActivity.trueFalseQuestions;
@@ -27,58 +25,53 @@ public class SoloGame extends AppCompatActivity {
 
     //every new question that is called in main calls this method
     //This method calls the appropriate method to execute the question
-    private ArrayList<Object> results = new ArrayList<>();
+    private ArrayList<Question> results = new ArrayList<>();
     private Question currentQuestion;
     private void newQuestion(){
         count++;
-        currentQuestion = new Question(count, passedQ, passedA, false);
-        switch ((int) (Math.random() * 4)){
+        //currentQuestion = new Question(count, passedQ, passedA, false);
+        switch ((int) (Math.random() * 3)){
             case 0:
-                highLow(trueFalseQuestions.pop());
+                currentQuestion = trueFalseQuestions.pop();
+                currentQuestion.num = count;
+                highLow(currentQuestion);
                 break;
             case 1:
-
+                currentQuestion = multChoiceQuestions.pop();
+                currentQuestion.num = count;
                 multipleChoice(multChoiceQuestions.pop());
                 break;
             case 2:
+                currentQuestion = sliderQuestions.pop();
+                currentQuestion.num = count;
                 slider(sliderQuestions.pop());
                 break;
-            case 3:
-                checkAll(checkAllQuestions.pop());
-                break;
-//        }
+        }
     }
     //Check functions for each type of question
     //Parameters include the selected answer compared to the correct answer
-    private void checkTF(String selectedA, String correctA){
-        if(selectedA.equals(correctA)){
+    private void checkTF(String selectedA, Question question){
+        if(selectedA.equals(question.answer)){
             currentQuestion.correct = true;
         }
         results.add(currentQuestion);
     }
 
-    private void checkSA(String selectedA, String correctA){
-        if(selectedA.equals(correctA)){
+    private void checkMC(String selectedA, Question question){
+        if(selectedA.equals(question.answer)){
             currentQuestion.correct = true;
         }
         results.add(currentQuestion);
     }
 
-    private void checkMC(String selectedA, String correctA){
-        if(selectedA.equals(correctA)){
-            currentQuestion.correct = true;
-        }
-        results.add(currentQuestion);
-    }
-
-    private void checkS(int sliderSelection, String correctA){
-        if(sliderSelection == Integer.parseInt(correctA)){
+    private void checkS(int sliderSelection, Question question){
+        if(sliderSelection == Integer.parseInt(question.answer)){
             currentQuestion.correct = true;
         }
         results.add(currentQuestion);
     }
     //Function called for a true or false question
-    private void highLow(Question question){
+    private void highLow(final Question question){
         TextView Q = findViewById(R.id.questionText);
         Q.setText(question.question);
         Button True = findViewById(R.id.buttonTrue);
@@ -86,58 +79,22 @@ public class SoloGame extends AppCompatActivity {
         True.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkTF("true", answer);
+                checkTF("true", question);
             }
         });
         Button False = findViewById(R.id.buttonFalse);
         False.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkTF("false", answer);
+                checkTF("false", question);
             }
         });
     }
 
-    private void checkAll(String question, String Answer){
+    private void multipleChoice(final Question question){
         TextView Q = findViewById(R.id.questionText);
-        Q.setText(question);
-        String Answers [] = Answer.split(";");
-        String correctAnswersTemp = "";
-        final CheckBox Option [] = new CheckBox[5];
-        int checkBox [] = {
-                R.id.checkboxOption1,
-                R.id.checkboxOption2,
-                R.id.checkboxOption3,
-                R.id.checkboxOption4,
-                R.id.checkboxOption5
-        };
-        for(int i = 0; i < 5; i++){
-            Option[i] = findViewById(checkBox[i]);
-            Option[i].setText(Answers[i].substring(2));
-            if(Answers[i].charAt(0) == 'c'){
-                correctAnswersTemp += i;
-            }
-        }
-        final String correctAnswers = correctAnswersTemp;
-        Button submit = findViewById(R.id.submitButton);
-        submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String selectedAnswers = "";
-                for(int i = 0; i < 5; i++){
-                    if(Option[i].isChecked()){
-                        selectedAnswers += i;
-                    }
-                    checkSA(selectedAnswers, correctAnswers);
-                }
-            }
-        });
-    }
-
-    private void multipleChoice(String question, String answer){
-        TextView Q = findViewById(R.id.questionText);
-        Q.setText(question);
-        final String [] Answers = answer.split(";");
+        Q.setText(question.question);
+        final String [] Answers = question.answer.split(";");
         String correctAnswerTemp = "";
         for(int i = 0; i < 4; i++){
             if(Answers[i].charAt(0) == 'C'){
@@ -150,7 +107,7 @@ public class SoloGame extends AppCompatActivity {
         buttonOption1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkMC(Answers[0].substring(2), correctAnswer);
+                checkMC(Answers[0].substring(2), question);
             }
         });
         Button buttonOption2 = findViewById(R.id.questionOption2);
@@ -158,7 +115,7 @@ public class SoloGame extends AppCompatActivity {
         buttonOption1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkMC(Answers[1].substring(2), correctAnswer);
+                checkMC(Answers[1].substring(2), question);
             }
         });
         Button buttonOption3 = findViewById(R.id.questionOption3);
@@ -166,7 +123,7 @@ public class SoloGame extends AppCompatActivity {
         buttonOption1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkMC(Answers[2].substring(2), correctAnswer);
+                checkMC(Answers[2].substring(2), question);
             }
         });
         Button buttonOption4 = findViewById(R.id.questionOption4);
@@ -174,22 +131,22 @@ public class SoloGame extends AppCompatActivity {
         buttonOption1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkMC(Answers[3].substring(2), correctAnswer);
+                checkMC(Answers[3].substring(2), question);
             }
         });
     }
 
-    private void slider(String Question, final String Answer) {
+    private void slider(final Question question) {
         TextView Q = findViewById(R.id.questionText);
-        Q.setText(Question);
+        Q.setText(question.question);
         final SeekBar slider = findViewById(R.id.slider);
-        int newMax = (int)(Integer.parseInt(Answer) + (Integer.parseInt(Answer) * Math.random()));
-        slider.setMax(newMax);
+        //int newMax = (int)(Integer.parseInt(Answer) + (Integer.parseInt(Answer) * Math.random()));
+        //slider.setMax(newMax);
         Button sliderButton = findViewById(R.id.sliderButton);
         sliderButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                checkS(slider.getProgress(), Answer);
+                checkS(slider.getProgress(), question);
             }
         });
     }
