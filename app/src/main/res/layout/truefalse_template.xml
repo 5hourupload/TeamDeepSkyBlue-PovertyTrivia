@@ -24,8 +24,8 @@
 
         <Button
             android:id="@+id/buttonTrue"
-            android:layout_width="250dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/buttonWidthStandard250"
+            android:layout_height="@dimen/buttonHeightStandard100"
             android:text="True" />
 
         <Button
