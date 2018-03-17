@@ -6,7 +6,7 @@ package deepskyblue.povertycrack;
  * It creates objects with member variables that correspond to the question attributes
  */
 
-public class Question {
+class Question {
     private int num;
     private String question;
     private String answer;
