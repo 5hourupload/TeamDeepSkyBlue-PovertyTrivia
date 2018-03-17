@@ -17,6 +17,8 @@
         <activity android:name=".SoloGame">
 
         </activity>
+        <activity android:name=".StatisticsReader">
+        </activity>
 
     </application>
 </manifest>

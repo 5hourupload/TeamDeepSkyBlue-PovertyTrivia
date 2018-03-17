@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        Intent newIntent = new Intent(this, StatisticsReader.class);
-//        startService(newIntent);
+        Intent newIntent = new Intent(this, StatisticsReader.class);
+        startActivity(newIntent);
 
 
 
