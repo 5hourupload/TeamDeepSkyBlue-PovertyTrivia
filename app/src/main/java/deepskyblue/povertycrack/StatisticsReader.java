@@ -78,7 +78,6 @@ public class StatisticsReader extends AppCompatActivity
         }
         Sheet s = wb.getSheet(0);
         int rows = s.getRows();
-        int cols = s.getColumns();
 
         for(int i = 0; i < rows; i++){
             String year = s.getCell(0,i).getContents();
