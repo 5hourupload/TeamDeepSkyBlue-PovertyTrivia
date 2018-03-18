@@ -33,17 +33,25 @@
                 android:id="@+id/questionOption1"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/buttonHeightStandard100"
-                android:text="Option1"/>
+                android:text="Option1"
+                android:background="@drawable/button_gradient"/>
 
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="5dp" />
             <Button
                 android:id="@+id/questionOption2"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/buttonHeightStandard100"
-                android:text="Option2"/>
+                android:text="Option2"
+                android:background="@drawable/button_gradient"/>
 
 
         </LinearLayout>
 
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="match_parent" />
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -57,11 +65,15 @@
                 android:text="Option3"
                 android:background="@drawable/button_gradient"/>
 
+            <Space
+                android:layout_width="5dp"
+                android:layout_height="5dp" />
             <Button
                 android:id="@+id/questionOption4"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/buttonHeightStandard100"
-                android:text="Option 4"/>
+                android:text="Option 4"
+                android:background="@drawable/button_gradient"/>
 
         </LinearLayout>
 
