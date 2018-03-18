@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import java.sql.SQLOutput;
 import java.text.DecimalFormat;
 
 import static deepskyblue.povertycrack.MainActivity.multChoiceQuestions;
@@ -311,5 +310,4 @@ public class SoloGame extends AppCompatActivity
             }
         }
     }
-
 }
