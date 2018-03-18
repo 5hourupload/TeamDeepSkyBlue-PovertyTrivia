@@ -3,22 +3,11 @@ package deepskyblue.povertycrack;
 import android.app.IntentService;
 import android.content.Intent;
 import android.content.res.AssetManager;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
-import android.view.View;
-import android.widget.TextView;
-
 import java.io.IOException;
 import java.io.InputStream;
-import java.sql.SQLOutput;
 import java.text.DecimalFormat;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.Random;
-
-import jxl.Cell;
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
