@@ -20,6 +20,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Random;
 
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
     static LinkedList<Question> multChoiceQuestions = new LinkedList<>();
     static LinkedList<Question> trueFalseQuestions = new LinkedList<>();
     static LinkedList<Question> sliderQuestions = new LinkedList<>();
+    static LinkedList<Question> results = new LinkedList<>();
+
 
 
     @Override

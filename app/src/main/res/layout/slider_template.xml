@@ -42,6 +42,6 @@
 
         android:progress="50"
         android:min="0"
-        android:max="100"/>
+        android:max="100" />
 
 </android.support.constraint.ConstraintLayout>
