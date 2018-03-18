@@ -12,7 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8585e0db-c586-4a65-bbf7-833dd31feea4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java" afterPath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java" afterPath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,19 +52,21 @@
       <file leaf-file-name="Question.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/Question.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+            <state relative-caret-position="-34">
+              <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatisticsReader.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StatisticsReader.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="129" column="39" lean-forward="false" selection-start-line="129" selection-start-column="39" selection-end-line="129" selection-end-column="39" />
-              <folding />
+            <state relative-caret-position="50">
+              <caret line="130" column="97" lean-forward="false" selection-start-line="130" selection-start-column="97" selection-end-line="130" selection-end-column="97" />
+              <folding>
+                <marker date="1521393066105" expanded="true" signature="5390:5396" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,10 +74,10 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="31" column="47" lean-forward="false" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
+            <state relative-caret-position="-1802">
+              <caret line="32" column="47" lean-forward="false" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
               <folding>
-                <marker date="1521390218889" expanded="true" signature="3308:4763" ph="{...}" />
+                <marker date="1521392358255" expanded="true" signature="5629:6003" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -84,43 +86,10 @@
       <file leaf-file-name="ResultScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/ResultScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
+            <state relative-caret-position="1700">
               <caret line="58" column="21" lean-forward="false" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
               <folding>
                 <marker date="1521390218895" expanded="true" signature="2367:2375" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SoloGame.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="160" column="59" lean-forward="false" selection-start-line="160" selection-start-column="59" selection-end-line="160" selection-end-column="59" />
-              <folding>
-                <element signature="e#4025#4191#0" expanded="true" />
-                <element signature="e#4119#4120#0" expanded="false" />
-                <element signature="e#4180#4181#0" expanded="false" />
-                <element signature="e#4190#4191#0" expanded="true" />
-                <element signature="e#4282#4449#0" expanded="true" />
-                <element signature="e#4376#4377#0" expanded="false" />
-                <element signature="e#4438#4439#0" expanded="false" />
-                <element signature="e#4448#4449#0" expanded="true" />
-                <element signature="e#6351#6352#0" expanded="false" />
-                <element signature="e#6421#6422#0" expanded="false" />
-                <element signature="e#6685#6686#0" expanded="false" />
-                <element signature="e#6755#6756#0" expanded="false" />
-                <element signature="e#7019#7020#0" expanded="false" />
-                <element signature="e#7089#7090#0" expanded="false" />
-                <element signature="e#7353#7354#0" expanded="false" />
-                <element signature="e#7423#7424#0" expanded="false" />
-                <element signature="e#8607#8608#0" expanded="false" />
-                <element signature="e#8677#8678#0" expanded="false" />
-                <element signature="e#9621#9771#0" expanded="true" />
-                <element signature="e#9715#9716#0" expanded="false" />
-                <element signature="e#9760#9761#0" expanded="false" />
-                <element signature="e#9770#9771#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1865,8 +1834,8 @@
         <option value="$PROJECT_DIR$/src/main/res/layout/questionbox_template.xml" />
         <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/Question.java" />
-        <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java" />
+        <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java" />
       </list>
     </option>
   </component>
@@ -1891,6 +1860,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2089,8 +2061,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2137,7 +2107,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2471,15 +2440,15 @@
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2560,7 +2529,7 @@
         <state relative-caret-position="884">
           <caret line="26" column="8" lean-forward="false" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
           <folding>
-            <marker date="1521385031536" expanded="true" signature="1570:1828" ph="..." />
+            <marker date="1521392358284" expanded="true" signature="1570:1828" ph="..." />
           </folding>
         </state>
       </provider>
@@ -2568,23 +2537,13 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/slider_template.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/slider_template.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="2584">
           <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding>
-            <marker date="1521349337227" expanded="true" signature="3117:3118" ph="..." />
+            <marker date="1521392358270" expanded="true" signature="3730:3731" ph="..." />
           </folding>
         </state>
       </provider>
@@ -2598,26 +2557,10 @@
           <caret line="235" column="43" lean-forward="false" selection-start-line="235" selection-start-column="43" selection-end-line="235" selection-end-column="43" />
           <folding>
             <element signature="e#4025#4191#0" expanded="true" />
-            <element signature="e#4119#4120#0" expanded="false" />
-            <element signature="e#4180#4181#0" expanded="false" />
             <element signature="e#4190#4191#0" expanded="true" />
             <element signature="e#4282#4449#0" expanded="true" />
-            <element signature="e#4376#4377#0" expanded="false" />
-            <element signature="e#4438#4439#0" expanded="false" />
             <element signature="e#4448#4449#0" expanded="true" />
-            <element signature="e#6351#6352#0" expanded="false" />
-            <element signature="e#6421#6422#0" expanded="false" />
-            <element signature="e#6685#6686#0" expanded="false" />
-            <element signature="e#6755#6756#0" expanded="false" />
-            <element signature="e#7019#7020#0" expanded="false" />
-            <element signature="e#7089#7090#0" expanded="false" />
-            <element signature="e#7353#7354#0" expanded="false" />
-            <element signature="e#7423#7424#0" expanded="false" />
-            <element signature="e#8607#8608#0" expanded="false" />
-            <element signature="e#8677#8678#0" expanded="false" />
             <element signature="e#9621#9771#0" expanded="true" />
-            <element signature="e#9715#9716#0" expanded="false" />
-            <element signature="e#9760#9761#0" expanded="false" />
             <element signature="e#9770#9771#0" expanded="true" />
           </folding>
         </state>
@@ -2636,7 +2579,7 @@
         <state relative-caret-position="170">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <marker date="1521390218889" expanded="true" signature="3308:4763" ph="{...}" />
+            <marker date="1521392358255" expanded="true" signature="5629:6003" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2645,7 +2588,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2550">
           <caret line="96" column="83" lean-forward="false" selection-start-line="96" selection-start-column="83" selection-end-line="96" selection-end-column="83" />
-          <folding />
+          <folding>
+            <marker date="1521393066105" expanded="true" signature="5390:5396" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2662,7 +2607,7 @@
         <state relative-caret-position="170">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <marker date="1521390218889" expanded="true" signature="3308:4763" ph="{...}" />
+            <marker date="1521392358255" expanded="true" signature="5629:6003" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2671,7 +2616,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2516">
           <caret line="93" column="9" lean-forward="false" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
-          <folding />
+          <folding>
+            <marker date="1521393066105" expanded="true" signature="5390:5396" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2681,26 +2628,10 @@
           <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
           <folding>
             <element signature="e#4025#4191#0" expanded="true" />
-            <element signature="e#4119#4120#0" expanded="false" />
-            <element signature="e#4180#4181#0" expanded="false" />
             <element signature="e#4190#4191#0" expanded="true" />
             <element signature="e#4282#4449#0" expanded="true" />
-            <element signature="e#4376#4377#0" expanded="false" />
-            <element signature="e#4438#4439#0" expanded="false" />
             <element signature="e#4448#4449#0" expanded="true" />
-            <element signature="e#6351#6352#0" expanded="false" />
-            <element signature="e#6421#6422#0" expanded="false" />
-            <element signature="e#6685#6686#0" expanded="false" />
-            <element signature="e#6755#6756#0" expanded="false" />
-            <element signature="e#7019#7020#0" expanded="false" />
-            <element signature="e#7089#7090#0" expanded="false" />
-            <element signature="e#7353#7354#0" expanded="false" />
-            <element signature="e#7423#7424#0" expanded="false" />
-            <element signature="e#8607#8608#0" expanded="false" />
-            <element signature="e#8677#8678#0" expanded="false" />
             <element signature="e#9621#9771#0" expanded="true" />
-            <element signature="e#9715#9716#0" expanded="false" />
-            <element signature="e#9760#9761#0" expanded="false" />
             <element signature="e#9770#9771#0" expanded="true" />
           </folding>
         </state>
@@ -2711,7 +2642,7 @@
         <state relative-caret-position="162">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <marker date="1521390218889" expanded="true" signature="3308:4763" ph="{...}" />
+            <marker date="1521392358255" expanded="true" signature="5629:6003" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2733,26 +2664,10 @@
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
             <element signature="e#4025#4191#0" expanded="true" />
-            <element signature="e#4119#4120#0" expanded="false" />
-            <element signature="e#4180#4181#0" expanded="false" />
             <element signature="e#4190#4191#0" expanded="true" />
             <element signature="e#4282#4449#0" expanded="true" />
-            <element signature="e#4376#4377#0" expanded="false" />
-            <element signature="e#4438#4439#0" expanded="false" />
             <element signature="e#4448#4449#0" expanded="true" />
-            <element signature="e#6351#6352#0" expanded="false" />
-            <element signature="e#6421#6422#0" expanded="false" />
-            <element signature="e#6685#6686#0" expanded="false" />
-            <element signature="e#6755#6756#0" expanded="false" />
-            <element signature="e#7019#7020#0" expanded="false" />
-            <element signature="e#7089#7090#0" expanded="false" />
-            <element signature="e#7353#7354#0" expanded="false" />
-            <element signature="e#7423#7424#0" expanded="false" />
-            <element signature="e#8607#8608#0" expanded="false" />
-            <element signature="e#8677#8678#0" expanded="false" />
             <element signature="e#9621#9771#0" expanded="true" />
-            <element signature="e#9715#9716#0" expanded="false" />
-            <element signature="e#9760#9761#0" expanded="false" />
             <element signature="e#9770#9771#0" expanded="true" />
           </folding>
         </state>
@@ -2785,7 +2700,7 @@
         <state relative-caret-position="54">
           <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
           <folding>
-            <marker date="1521390218889" expanded="true" signature="3308:4763" ph="{...}" />
+            <marker date="1521392358255" expanded="true" signature="5629:6003" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2804,26 +2719,10 @@
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
             <element signature="e#4025#4191#0" expanded="true" />
-            <element signature="e#4119#4120#0" expanded="false" />
-            <element signature="e#4180#4181#0" expanded="false" />
             <element signature="e#4190#4191#0" expanded="true" />
             <element signature="e#4282#4449#0" expanded="true" />
-            <element signature="e#4376#4377#0" expanded="false" />
-            <element signature="e#4438#4439#0" expanded="false" />
             <element signature="e#4448#4449#0" expanded="true" />
-            <element signature="e#6351#6352#0" expanded="false" />
-            <element signature="e#6421#6422#0" expanded="false" />
-            <element signature="e#6685#6686#0" expanded="false" />
-            <element signature="e#6755#6756#0" expanded="false" />
-            <element signature="e#7019#7020#0" expanded="false" />
-            <element signature="e#7089#7090#0" expanded="false" />
-            <element signature="e#7353#7354#0" expanded="false" />
-            <element signature="e#7423#7424#0" expanded="false" />
-            <element signature="e#8607#8608#0" expanded="false" />
-            <element signature="e#8677#8678#0" expanded="false" />
             <element signature="e#9621#9771#0" expanded="true" />
-            <element signature="e#9715#9716#0" expanded="false" />
-            <element signature="e#9760#9761#0" expanded="false" />
             <element signature="e#9770#9771#0" expanded="true" />
           </folding>
         </state>
@@ -2853,7 +2752,7 @@
         <state relative-caret-position="54">
           <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
           <folding>
-            <marker date="1521390218889" expanded="true" signature="3308:4763" ph="{...}" />
+            <marker date="1521392358255" expanded="true" signature="5629:6003" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2874,7 +2773,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1521390218889" expanded="true" signature="3308:4763" ph="{...}" />
+            <marker date="1521392358255" expanded="true" signature="5629:6003" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2885,7 +2784,7 @@
         <state relative-caret-position="1998">
           <caret line="74" column="19" lean-forward="false" selection-start-line="74" selection-start-column="19" selection-end-line="74" selection-end-column="19" />
           <folding>
-            <marker date="1521349337227" expanded="true" signature="3117:3118" ph="..." />
+            <marker date="1521392358270" expanded="true" signature="3730:3731" ph="..." />
           </folding>
         </state>
       </provider>
@@ -2962,14 +2861,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/questionbox.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/true_false.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/selectall_template.xml" />
@@ -3011,7 +2910,7 @@
         <state relative-caret-position="2584">
           <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding>
-            <marker date="1521349337227" expanded="true" signature="3117:3118" ph="..." />
+            <marker date="1521392358270" expanded="true" signature="3730:3731" ph="..." />
           </folding>
         </state>
       </provider>
@@ -3019,33 +2918,13 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="31" column="47" lean-forward="false" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="47" />
-          <folding>
-            <marker date="1521390218889" expanded="true" signature="3308:4763" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/slider_template.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="30" column="43" lean-forward="false" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/slider_template.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/questionbox_template.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="578">
           <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
           <folding>
-            <marker date="1521385031536" expanded="true" signature="1570:1828" ph="..." />
+            <marker date="1521392358284" expanded="true" signature="1570:1828" ph="..." />
           </folding>
         </state>
       </provider>
@@ -3053,17 +2932,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/ResultScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
+        <state relative-caret-position="1700">
           <caret line="58" column="21" lean-forward="false" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
           <folding>
             <marker date="1521390218895" expanded="true" signature="2367:2375" ph="{...}" />
@@ -3071,41 +2942,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="129" column="39" lean-forward="false" selection-start-line="129" selection-start-column="39" selection-end-line="129" selection-end-column="39" />
+        <state relative-caret-position="714">
+          <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+          <folding>
+            <element signature="e#4025#4191#0" expanded="true" />
+            <element signature="e#4190#4191#0" expanded="true" />
+            <element signature="e#4282#4449#0" expanded="true" />
+            <element signature="e#4448#4449#0" expanded="true" />
+            <element signature="e#9621#9771#0" expanded="true" />
+            <element signature="e#9770#9771#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/Question.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="160" column="59" lean-forward="false" selection-start-line="160" selection-start-column="59" selection-end-line="160" selection-end-column="59" />
+        <state relative-caret-position="-1802">
+          <caret line="32" column="47" lean-forward="false" selection-start-line="32" selection-start-column="47" selection-end-line="32" selection-end-column="47" />
           <folding>
-            <element signature="e#4025#4191#0" expanded="true" />
-            <element signature="e#4119#4120#0" expanded="false" />
-            <element signature="e#4180#4181#0" expanded="false" />
-            <element signature="e#4190#4191#0" expanded="true" />
-            <element signature="e#4282#4449#0" expanded="true" />
-            <element signature="e#4376#4377#0" expanded="false" />
-            <element signature="e#4438#4439#0" expanded="false" />
-            <element signature="e#4448#4449#0" expanded="true" />
-            <element signature="e#6351#6352#0" expanded="false" />
-            <element signature="e#6421#6422#0" expanded="false" />
-            <element signature="e#6685#6686#0" expanded="false" />
-            <element signature="e#6755#6756#0" expanded="false" />
-            <element signature="e#7019#7020#0" expanded="false" />
-            <element signature="e#7089#7090#0" expanded="false" />
-            <element signature="e#7353#7354#0" expanded="false" />
-            <element signature="e#7423#7424#0" expanded="false" />
-            <element signature="e#8607#8608#0" expanded="false" />
-            <element signature="e#8677#8678#0" expanded="false" />
-            <element signature="e#9621#9771#0" expanded="true" />
-            <element signature="e#9715#9716#0" expanded="false" />
-            <element signature="e#9760#9761#0" expanded="false" />
-            <element signature="e#9770#9771#0" expanded="true" />
+            <marker date="1521392358255" expanded="true" signature="5629:6003" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="130" column="97" lean-forward="false" selection-start-line="130" selection-start-column="97" selection-end-line="130" selection-end-column="97" />
+          <folding>
+            <marker date="1521393066105" expanded="true" signature="5390:5396" ph="{...}" />
           </folding>
         </state>
       </provider>
