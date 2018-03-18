@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import java.sql.SQLOutput;
 import java.text.DecimalFormat;
 
 import static deepskyblue.povertycrack.MainActivity.multChoiceQuestions;
@@ -32,19 +33,10 @@ public class SoloGame extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.questionbox_template);
-
-
         tf = findViewById(R.id.tf_view);
         mc = findViewById(R.id.mc_view);
         sl = findViewById(R.id.slider_view);
         qr = findViewById(R.id.question_result);
-//        for (int i = 0; i < 99999; i++)
-//        {
-//            trueFalseQuestions.add(new Question(-1, "What?", "True", " ", false));
-//            multChoiceQuestions.add(new Question(-1, "What?", "63893", " ", false));
-//            sliderQuestions.add(new Question(-1, "What m8?", "63893", " ", false));
-//
-//        }
         newQuestion();
     }
 
@@ -91,14 +83,17 @@ public class SoloGame extends AppCompatActivity
         {
             question.correct = true;
             streak++;
-            if(score == 0){
+            if (score == 0)
+            {
                 score++;
             }
-            else{
+            else
+            {
                 score += streak;
             }
         }
-        else{
+        else
+        {
             streak = 0;
             score--;
         }
@@ -108,21 +103,23 @@ public class SoloGame extends AppCompatActivity
     }
 
 
-
     private void checkS(int sliderSelection, Question question)
     {
         if (sliderSelection == Integer.parseInt(question.answer))
         {
             question.correct = true;
             streak++;
-            if(score == 0){
+            if (score == 0)
+            {
                 score++;
             }
-            else{
+            else
+            {
                 score += streak;
             }
         }
-        else{
+        else
+        {
             streak = 0;
             score--;
         }
@@ -166,10 +163,19 @@ public class SoloGame extends AppCompatActivity
         clearLayouts();
 
         mc.setVisibility(View.VISIBLE);
+        System.out.println(question.answer);
 
         String[] Answers = new String[4];
-        String number = question.answer.replace(",", "").replace("$","").replace(".","");
-        int correctAnswerTemp = Integer.parseInt(number);
+        String number = question.answer.replace(",", "").replace("$", "").replace("-", "");
+        int correctAnswerTemp = -1;
+        try
+        {
+            correctAnswerTemp = Integer.parseInt(number);
+
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+        }
         int random = (int) (Math.random() * 4);
         Answers[random] = question.answer;
         for (int i = 0; i < 4; i++)
@@ -286,7 +292,7 @@ public class SoloGame extends AppCompatActivity
 
         if (results.size() >= 2)
         {
-            if (!results.get(results.size() -1).correct && !results.get(results.size() -2).correct)
+            if (!results.get(results.size() - 1).correct && !results.get(results.size() - 2).correct)
             {
                 Intent newIntent = new Intent(getApplicationContext(), ResultScreen.class);
                 startActivity(newIntent);

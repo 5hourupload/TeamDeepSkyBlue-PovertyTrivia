@@ -76,6 +76,7 @@ public class StatisticsReader extends IntentService
                     break;
                 case 2:
                     sliderQuestions.push(generateSlider(year, type, group, value));
+                    break;
             }
         }
     }
