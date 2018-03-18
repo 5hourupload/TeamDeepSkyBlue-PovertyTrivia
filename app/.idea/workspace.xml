@@ -120,8 +120,8 @@
       <file leaf-file-name="SoloGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2890">
-              <caret line="102" column="20" lean-forward="false" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
+            <state relative-caret-position="204">
+              <caret line="235" column="43" lean-forward="false" selection-start-line="235" selection-start-column="43" selection-end-line="235" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -3033,8 +3033,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2890">
-          <caret line="102" column="20" lean-forward="false" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
+        <state relative-caret-position="204">
+          <caret line="235" column="43" lean-forward="false" selection-start-line="235" selection-start-column="43" selection-end-line="235" selection-end-column="43" />
           <folding />
         </state>
       </provider>

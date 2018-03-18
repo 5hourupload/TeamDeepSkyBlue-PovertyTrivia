@@ -233,6 +233,7 @@ public class SoloGame extends AppCompatActivity
         final SeekBar slider = findViewById(R.id.slider);
         slider.setMax(100000);
         slider.setMax(50000);
+        slider.setKeyProgressIncrement(10);
 
         //int newMax = (int)(Integer.parseInt(Answer) + (Integer.parseInt(Answer) * Math.random()));
         //slider.setMax(newMax);
