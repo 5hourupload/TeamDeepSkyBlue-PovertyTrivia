@@ -97,6 +97,18 @@ public class StatisticsReader extends AppCompatActivity
             }
         }
     }
+    /*
+    private String createIncomeQuestion(String year, String type, String group, String value){
+
+    }
+
+    private String createPopulationInPovertyQuestion(String year, String type, String group, String value){
+
+    }
+
+    private String createChildrenInPovertyQuestion(String year, String type, String group, String value){
+
+    }*/
 
     private Question generateTrueFalse(String year, String type, String group, String value){
         String q;
