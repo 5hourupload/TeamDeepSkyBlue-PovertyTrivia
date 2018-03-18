@@ -228,26 +228,7 @@ public class SoloGame extends AppCompatActivity {
                 checkS(slider.getProgress(), question);
             }
         });
-
-        final TextView seekBarText = (TextView) findViewById(R.id.seekBarText);
-        SeekBar seekBarTest = (SeekBar) findViewById(R.id.seekBarTest);
-
-        seekBarTest.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
-                seekBarText.setText("" + progress);
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
+        
     }
 
     private void clearLayouts() {

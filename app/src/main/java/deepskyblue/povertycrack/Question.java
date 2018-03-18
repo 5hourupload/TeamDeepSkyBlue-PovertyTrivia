@@ -7,13 +7,16 @@ package deepskyblue.povertycrack;
  */
 
 public class Question {
-    public int num;
-    public String question;
-    public String answer;
-    public String completeFact;
-    public boolean correct;
+    protected int num;
+    protected String question;
+    protected String answer;
+    protected String completeFact;
+    protected boolean correct;
 
     public Question(int num, String question, String answer, String completeFact, boolean correct){
+        /*All the instantiations are set from the class to later formulate the questions for the
+        app, taking in specific words and data that will be passed on to make a comprehensible
+        question.*/
         this.num = num;
         this.question = question;
         this.answer = answer;
