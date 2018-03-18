@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         String arg4 = s.getCell(3,random).getContents();
 
         String randomFactText = "Did you know: In " +arg1+
-                ", The " +arg2+ " for " +arg3+ " was " +arg4;
+                ", the " +arg2+ " for " +arg3+ " was " +arg4 + ".";
         TextView randomFact = findViewById(R.id.dykFact);
         randomFact.setText(randomFactText);
 
