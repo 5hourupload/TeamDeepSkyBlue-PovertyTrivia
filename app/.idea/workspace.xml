@@ -12,7 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8585e0db-c586-4a65-bbf7-833dd31feea4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java" afterPath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/slider_template.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/slider_template.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -121,8 +120,8 @@
       <file leaf-file-name="SoloGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="226" column="24" lean-forward="true" selection-start-line="226" selection-start-column="24" selection-end-line="226" selection-end-column="24" />
+            <state relative-caret-position="-2890">
+              <caret line="102" column="20" lean-forward="false" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -144,10 +143,10 @@
       <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="2618">
-              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+            <state relative-caret-position="2584">
+              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding>
-                <marker date="1521348540700" expanded="true" signature="3162:3163" ph="..." />
+                <marker date="1521349337227" expanded="true" signature="3117:3118" ph="..." />
               </folding>
             </state>
           </provider>
@@ -1895,8 +1894,8 @@
         <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/ResultScreen.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/questionbox_template.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/slider_template.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java" />
       </list>
     </option>
   </component>
@@ -2948,10 +2947,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="2618">
-          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        <state relative-caret-position="2584">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding>
-            <marker date="1521348540700" expanded="true" signature="3162:3163" ph="..." />
+            <marker date="1521349337227" expanded="true" signature="3117:3118" ph="..." />
           </folding>
         </state>
       </provider>
@@ -3034,8 +3033,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="226" column="24" lean-forward="true" selection-start-line="226" selection-start-column="24" selection-end-line="226" selection-end-column="24" />
+        <state relative-caret-position="-2890">
+          <caret line="102" column="20" lean-forward="false" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
           <folding />
         </state>
       </provider>

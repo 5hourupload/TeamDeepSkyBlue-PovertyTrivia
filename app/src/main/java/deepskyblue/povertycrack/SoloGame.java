@@ -98,6 +98,10 @@ public class SoloGame extends AppCompatActivity
                 score += streak;
             }
         }
+        else{
+            streak = 0;
+            score--;
+        }
         handleResults(selectedA, question);
 
 
@@ -117,6 +121,10 @@ public class SoloGame extends AppCompatActivity
             else{
                 score += streak;
             }
+        }
+        else{
+            streak = 0;
+            score--;
         }
         handleResults(Integer.toString(sliderSelection), question);
     }
