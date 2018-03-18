@@ -7,9 +7,13 @@
         <!--android:endColor="@color/smokeWhite"-->
         <!--android:type="linear"-->
         <!--/>-->
-    <solid
-        android:color="#B0B0B0"
-        />
+
+    <gradient
+        android:startColor="#D1D1D1"
+        android:centerColor="#AFAFAF"
+        android:endColor="#D1D1D1"
+        android:type="linear"
+        android:angle="90"/>
     <stroke
         android:width="3dp"
         android:color="#8192A2"
