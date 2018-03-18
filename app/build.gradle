@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "deepskyblue.povertycrack"
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -27,9 +27,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.android.support:multidex:1.0.3'
-    compile('org.apache.poi:poi-ooxml:3.12') {
-        exclude group: 'stax', module: 'stax-api'
-    }
+
     compile files('libs/J-Excel-1.0-SNAPSHOT.jar')
     implementation files('libs/J-Excel-1.0-SNAPSHOT.jar')
 }

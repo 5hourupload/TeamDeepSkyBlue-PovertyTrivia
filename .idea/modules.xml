@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DeepSkyBlue.iml" filepath="$PROJECT_DIR$/DeepSkyBlue.iml" />
+      <module fileurl="file://C:\Users\Alan\Documents\GitHub\DeepSkyBlue\DeepSkyBlue.iml" filepath="C:\Users\Alan\Documents\GitHub\DeepSkyBlue\DeepSkyBlue.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Alan\Documents\GitHub\DeepSkyBlue\app\app.iml" filepath="C:\Users\Alan\Documents\GitHub\DeepSkyBlue\app\app.iml" />
     </modules>
   </component>
 </project>

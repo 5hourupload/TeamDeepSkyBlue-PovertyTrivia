@@ -1,71 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/gradient">
-
-    <TextView
-        android:id="@+id/questionText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin"
-
-        android:layout_marginStart="@dimen/margin"
-        android:layout_marginTop="@dimen/margin"
-        android:background="@color/transparent"
-
-        android:text="Question Placeholder Question Placeholder Question Placeholder Question Placeholder Question Placeholder Question Placeholder"
+<android.support.constraint.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@drawable/gradient">
 
 
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.087" />
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/multiplechoice_template"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-    <include
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        layout="@layout/slider_template"/>
-    <include
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        layout="@layout/truefalse_template"/>
 
-    <include
-        layout="@layout/question_result"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+	<TextView
+		android:id="@+id/scoreCounter"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Score:"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintBottom_toTopOf="@+id/questionText"
+		app:layout_constraintEnd_toStartOf="@+id/streakCounter"/>
+	<TextView
+		android:id="@+id/streakCounter"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Streak:"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintStart_toEndOf="@id/scoreCounter"
+		app:layout_constraintBottom_toTopOf="@+id/questionText"/>
 
-    <TextView
-        android:id="@+id/streakCounter"
-        android:layout_width="82dp"
-        android:layout_height="31dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Streak:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+	<TextView
+		android:id="@+id/questionText"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="@dimen/margin"
+		android:layout_marginStart="@dimen/margin"
+		android:layout_marginTop="@dimen/margin"
+		android:background="@color/transparent"
+		android:text="Question Placeholder Question Placeholder"
+		android:textSize="20dp"
+		android:gravity="center"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintVertical_bias="0.1"
+		app:layout_constraintBottom_toBottomOf="parent"/>
 
-    <TextView
-        android:id="@+id/scoreCounter"
-        android:layout_width="73dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Score:"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+	<include
+		layout="@layout/multiplechoice_template"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+
+	<include
+		layout="@layout/slider_template"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+
+	<include
+		layout="@layout/truefalse_template"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+
+	<include
+		layout="@layout/question_result"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"/>
+
 
 </android.support.constraint.ConstraintLayout>
