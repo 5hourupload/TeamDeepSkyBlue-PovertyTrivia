@@ -28,13 +28,13 @@
             android:id="@+id/buttonTrue"
             android:layout_width="@dimen/buttonWidthStandard250"
             android:layout_height="@dimen/buttonHeightStandard100"
-            android:text="True" />
+            android:text="@string/true_answer" />
 
         <Button
             android:id="@+id/buttonFalse"
             android:layout_width="250dp"
             android:layout_height="100dp"
-            android:text="False" />
+            android:text="@string/false_answer" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

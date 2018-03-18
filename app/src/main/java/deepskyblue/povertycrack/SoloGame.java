@@ -1,5 +1,6 @@
 package deepskyblue.povertycrack;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
@@ -76,6 +77,8 @@ public class SoloGame extends AppCompatActivity
     //Parameters include the selected answer compared to the correct answer
     private void checkTF(String selectedA, Question question)
     {
+        System.out.println(selectedA);
+        System.out.println(question.answer);
         if (selectedA.equals(question.answer))
         {
             question.correct = true;
@@ -120,7 +123,7 @@ public class SoloGame extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                checkTF("true", question);
+                checkTF("True", question);
             }
         });
         Button False = findViewById(R.id.buttonFalse);
@@ -129,7 +132,7 @@ public class SoloGame extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                checkTF("false", question);
+                checkTF("False", question);
             }
         });
     }
@@ -256,6 +259,15 @@ public class SoloGame extends AppCompatActivity
                 newQuestion();
             }
         });
+
+        if (results.size() >= 2)
+        {
+            if (!results.get(results.size() -1).correct && !results.get(results.size() -2).correct)
+            {
+                Intent newIntent = new Intent(getApplicationContext(), ResultScreen.class);
+                startActivity(newIntent);
+            }
+        }
     }
 
 }

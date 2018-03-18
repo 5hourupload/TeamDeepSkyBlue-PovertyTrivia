@@ -3,4 +3,6 @@
     <string name="text_fill">TextFill_TextFill_TextFill_TextFill_TextFill_TextFill_TextFill_TextFill_
     TextFill_TextFill_TextFill_TextFill_TextFill_TextFill_TextFill_TextFill_TextFill_TextFill_
     </string>
+    <string name="true_answer">True</string>
+    <string name="false_answer">False</string>
 </resources>
