@@ -16,6 +16,7 @@
 		android:layout_height="wrap_content"
 		android:text="Score:"
 		android:textColor="@color/smokeWhite"
+		android:textSize="25dp"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
 		app:layout_constraintBottom_toTopOf="@+id/questionText"
@@ -26,6 +27,7 @@
 		android:layout_height="wrap_content"
 		android:text="Streak:"
 		android:textColor="@color/smokeWhite"
+		android:textSize="25dp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
 		app:layout_constraintStart_toEndOf="@id/scoreCounter"
@@ -40,7 +42,7 @@
 		android:layout_marginTop="@dimen/margin"
 		android:background="@color/transparent"
 		android:text="Question Placeholder Question Placeholder"
-		android:textSize="20dp"
+		android:textSize="25dp"
 		android:textColor="@color/smokeWhite"
 		android:gravity="center"
 		app:layout_constraintEnd_toEndOf="parent"
@@ -67,7 +69,8 @@
 	<include
 		layout="@layout/question_result"
 		android:layout_width="match_parent"
-		android:layout_height="match_parent"/>
+		android:layout_height="match_parent"
+		/>
 
 
 </android.support.constraint.ConstraintLayout>
