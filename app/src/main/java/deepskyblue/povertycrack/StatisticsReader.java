@@ -35,18 +35,22 @@ public class StatisticsReader extends IntentService
     {
         super("man");
     }
+
     public StatisticsReader(String name)
     {
         super("man");
     }
+
     @Override
     protected void onHandleIntent(Intent service)
     {
-
+        //runs generateQuestions
         generateQuestions();
     }
 
-    private void generateQuestions(){
+    
+    private void generateQuestions()
+    {
         AssetManager am = getApplicationContext().getAssets();
         InputStream is = null;
         Workbook wb = null;
@@ -55,23 +59,29 @@ public class StatisticsReader extends IntentService
             is = am.open("focused_statistics.xls");
             wb = Workbook.getWorkbook(is);
             is.close();
-        } catch (IOException e)
+        }
+        //catches File Not Found Exception
+        catch (IOException e)
         {
             e.printStackTrace();
-        } catch (BiffException e)
+        }
+        //catches excel related exceptions
+        catch (BiffException e)
         {
             e.printStackTrace();
         }
         Sheet s = wb.getSheet(0);
         int rows = s.getRows();
 
-        for(int i = 0; i < rows; i++){
-            String year = s.getCell(0,i).getContents();
-            String type = s.getCell(1,i).getContents();
-            String group = s.getCell(2,i).getContents();
-            String value = s.getCell(3,i).getContents();
-            int questionType = (int)(Math.random() * 2);
-            switch (questionType){
+        for (int i = 0; i < rows; i++)
+        {
+            String year = s.getCell(0, i).getContents();
+            String type = s.getCell(1, i).getContents();
+            String group = s.getCell(2, i).getContents();
+            String value = s.getCell(3, i).getContents();
+            int questionType = (int) (Math.random() * 2);
+            switch (questionType)
+            {
                 case 0:
                     trueFalseQuestions.push(generateTrueFalse(year, type, group, value));
                     break;
@@ -88,47 +98,49 @@ public class StatisticsReader extends IntentService
         Collections.shuffle(sliderQuestions);
     }
 
-    private Question generateTrueFalse(String year, String type, String group, String value){
+    private Question generateTrueFalse(String year, String type, String group, String value)
+    {
         String q;
         String a;
         String cf;
         Random r = new Random();
         boolean TorF = r.nextBoolean();
-        if(TorF){
-            q = "True or False: In " +year+ ", the " +type+ " for " +group+ " was " +value+ "?";
+        if (TorF)
+        {
+            q = "True or False: In " + year + ", the " + type + " for " + group + " was " + value + "?";
             a = "True";
-        }
-        else{
+        } else
+        {
             String shift = "";
             if (type.contains("Income"))
             {
-                shift = "$" + (int)(Math.random() * (87_057 - 30_572)) + 30_572;
-            }
-            else if (type.contains("percentage"))
+                shift = "$" + (int) (Math.random() * (87_057 - 30_572)) + 30_572;
+            } else if (type.contains("percentage"))
             {
                 DecimalFormat formatter = new DecimalFormat("#.##");
                 shift = formatter.format(Math.random() * 1);
-            }
-            else
+            } else
             {
                 shift = Integer.toString((int) ((Math.random() * (100_000)) + 10_000));
             }
-            q = "True or False: In " +year+ ", the " +type+ " for " +group+ " was " +shift + "?";
+            q = "True or False: In " + year + ", the " + type + " for " + group + " was " + shift + "?";
             a = "False";
         }
-        cf = "In " +year+ ", the " +type+ " for " +group+ " was " +value;
+        cf = "In " + year + ", the " + type + " for " + group + " was " + value;
         return new Question(-1, q, type, a, cf, false);
     }
 
-    private Question generateMultipleChoice(String year, String type, String group, String value){
-        String q = "In " +year+ ", what was the " +type+ " for " +group+ "?";
-        String cf = "In " +year+ ", the " +type+ " for " +group+ " was " +value;
+    private Question generateMultipleChoice(String year, String type, String group, String value)
+    {
+        String q = "In " + year + ", what was the " + type + " for " + group + "?";
+        String cf = "In " + year + ", the " + type + " for " + group + " was " + value;
         return new Question(-1, q, type, value, cf, false);
     }
 
-    private Question generateSlider(String year, String type, String group, String value){
-        String q = "In the year " +year+ ", what was the level of " +type+ " for " +group+ "?";
-        String cf = "Can you believe that in " +year+ ", that the " +type+ " for " +group+ "was only" +value+ "!";
+    private Question generateSlider(String year, String type, String group, String value)
+    {
+        String q = "In the year " + year + ", what was the level of " + type + " for " + group + "?";
+        String cf = "Can you believe that in " + year + ", that the " + type + " for " + group + "was only" + value + "!";
         return new Question(-1, q, type, value, cf, false);
     }
 }
