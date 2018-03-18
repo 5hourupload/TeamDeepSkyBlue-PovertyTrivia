@@ -22,10 +22,23 @@
         app:layout_constraintTop_toBottomOf="@id/logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/testtest"
+        app:layout_constraintBottom_toTopOf="@+id/rules"
         android:background="@drawable/button_gradient"/>
 
 
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/buttonSolo"
+        app:layout_constraintBottom_toTopOf="@+id/testtest"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:text="See how many questions you can get right! If you get two in a row wrong, you lose!"
+        android:gravity="center"
+        android:textColor="@color/lightGray"
+        android:id="@+id/rules"/>
     <TextView
         android:id="@+id/testtest"
         android:layout_width="wrap_content"
@@ -41,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/dykFact"
-        app:layout_constraintTop_toBottomOf="@id/buttonSolo"/>
+        app:layout_constraintTop_toBottomOf="@id/rules"/>
 
     <TextView
         android:id="@+id/dykFact"
