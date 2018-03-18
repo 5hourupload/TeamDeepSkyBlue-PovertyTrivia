@@ -221,6 +221,8 @@ public class SoloGame extends AppCompatActivity {
             correctAnswer.setText(question.answer);
         }
 
+        TextView correctFact = findViewById(R.id.correct_fact);
+        correctFact.setText(question.completeFact);
 
         Button nextQuestion = findViewById(R.id.next_question);
         nextQuestion.setOnClickListener(new View.OnClickListener() {
@@ -230,7 +232,7 @@ public class SoloGame extends AppCompatActivity {
             }
         });
 
-        if (results.size() >= 2000) {
+        if (results.size() >= 2) {
             if (!results.get(results.size() - 1).correct && !results.get(results.size() - 2).correct) {
                 Intent newIntent = new Intent(getApplicationContext(), ResultScreen.class);
                 startActivity(newIntent);

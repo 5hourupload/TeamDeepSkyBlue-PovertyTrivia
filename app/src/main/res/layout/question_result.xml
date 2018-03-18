@@ -26,7 +26,6 @@
 		android:textColor="@color/slightGray"
 		app:layout_constraintBottom_toTopOf="@+id/correct_answer"
 		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintHorizontal_bias="0.501"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/space"/>
 
@@ -39,7 +38,7 @@
 		android:text="True!"
 		android:textSize="50sp"
 		android:textColor="@color/smokeWhite"
-		app:layout_constraintBottom_toTopOf="@+id/next_question"
+		app:layout_constraintBottom_toTopOf="@+id/correct_fact"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toBottomOf="@id/comment"/>
@@ -54,12 +53,12 @@
 		android:layout_marginTop="8dp"
 		android:text="fact_placeholder"
 		android:textColor="@color/smokeWhite"
-		android:textSize="35dp"
-		app:layout_constraintBottom_toBottomOf="parent"
+		android:textSize="20dp"
+		android:gravity="center"
+		app:layout_constraintBottom_toTopOf="@+id/next_question"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent"
-		app:layout_constraintVertical_bias="0.832" />
+		app:layout_constraintTop_toBottomOf="@id/correct_answer" />
 
 	<Button
 		android:id="@+id/next_question"
@@ -74,6 +73,6 @@
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/correct_answer"/>
+		app:layout_constraintTop_toBottomOf="@id/correct_fact"/>
 
 </android.support.constraint.ConstraintLayout>
