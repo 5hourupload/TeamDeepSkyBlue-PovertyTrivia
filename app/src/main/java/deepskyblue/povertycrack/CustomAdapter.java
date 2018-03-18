@@ -34,6 +34,8 @@ class CustomAdapter extends ArrayAdapter<Question>
         TextView answerText = (TextView) customView.findViewById(R.id.answerResult);
         ImageView myImage = (ImageView) customView.findViewById(R.id.imageView);
 
+        //sets the text of the question from the question object at a given position
+        questionText.setText(singleQuestionItem.question);
         //sets the text of the answer from the question object at a given position
         answerText.setText(singleQuestionItem.answer);
 

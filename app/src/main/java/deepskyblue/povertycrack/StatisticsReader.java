@@ -104,6 +104,12 @@ public class StatisticsReader extends IntentService
         //formats the question from the given database
         if (TorF)
         {
+            if (!type.contains("Income") && !type.contains("percentage"))
+            {
+                DecimalFormat formatter = new DecimalFormat("###,###,###");
+                int number = Integer.parseInt(value);
+                value = formatter.format(number);
+            }
             q = "True or False: In " + year + ", the " + type + " for " + group + " was " + value + "?";
             a = "True";
         } else
@@ -114,7 +120,7 @@ public class StatisticsReader extends IntentService
             if (type.contains("Income"))
             {
                 DecimalFormat formatter = new DecimalFormat("###,###,###");
-                shift = "$" + formatter.format((int) (Math.random() * (87_057 - 30_572)) + 30_572);
+                shift = "$" + formatter.format((int) (Math.random() * (70000)) + 30572);
             } else if (type.contains("percentage"))//format contains percentage
             {
                 DecimalFormat formatter = new DecimalFormat("#.##");
@@ -127,8 +133,7 @@ public class StatisticsReader extends IntentService
             q = "True or False: In " + year + ", the " + type + " for " + group + " was " + shift + "?";
             a = "False";
         }
-        DecimalFormat formatter = new DecimalFormat("###,###,###");
-        cf = "In " + year + ", the " + type + " for " + group + " was " + formatter.format(value);
+        cf = "In " + year + ", the " + type + " for " + group + " was " + value;
         return new Question(-1, q, type, a, cf, false);//returns formatted question
     }
 
