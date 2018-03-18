@@ -19,6 +19,7 @@ import jxl.read.biff.BiffException;
 
 public class MainActivity extends AppCompatActivity {
 
+    //The lists that will hold the various diverse generated questions
     static LinkedList<Question> multChoiceQuestions = new LinkedList<>();
     static LinkedList<Question> trueFalseQuestions = new LinkedList<>();
     static LinkedList<Question> sliderQuestions = new LinkedList<>();
