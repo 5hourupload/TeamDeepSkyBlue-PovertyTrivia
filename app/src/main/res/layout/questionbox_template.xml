@@ -15,7 +15,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="Score:"
-		android:textColor="@color/smokeWhite"
+		android:textColor="@color/slightGray"
 		android:textSize="25dp"
 		app:layout_constraintStart_toStartOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
@@ -26,7 +26,7 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="Streak:"
-		android:textColor="@color/smokeWhite"
+		android:textColor="@color/slightGray"
 		android:textSize="25dp"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
@@ -56,10 +56,6 @@
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"/>
 
-	<include
-		layout="@layout/slider_template"
-		android:layout_width="match_parent"
-		android:layout_height="match_parent"/>
 
 	<include
 		layout="@layout/truefalse_template"
