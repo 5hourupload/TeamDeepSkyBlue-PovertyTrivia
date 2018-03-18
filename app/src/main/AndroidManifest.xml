@@ -21,6 +21,8 @@
         </activity>
         <activity android:name=".ResultScreen">
         </activity>
+        <activity android:name=".Ans">
+        </activity>
 
     </application>
 </manifest>
