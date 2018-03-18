@@ -114,7 +114,7 @@ public class StatisticsReader extends IntentService
             if (type.contains("Income"))
             {
                 DecimalFormat formatter = new DecimalFormat("###,###,###");
-                shift = "$" + formatter.format((int) (Math.random() * (87_057 - 30_572)) + 30_572);
+                shift = "$" + formatter.format((int) (Math.random() * (70000)) + 30572);
             } else if (type.contains("percentage"))//format contains percentage
             {
                 DecimalFormat formatter = new DecimalFormat("#.##");
