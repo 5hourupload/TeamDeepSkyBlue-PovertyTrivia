@@ -103,7 +103,8 @@ public class StatisticsReader extends IntentService
             String shift = "";
             if (type.contains("Income"))
             {
-                shift = "$" + (int) (Math.random() * (87_057 - 30_572)) + 30_572;
+                DecimalFormat formatter = new DecimalFormat("###,###,###");
+                shift = "$" + formatter.format((int) (Math.random() * (87_057 - 30_572)) + 30_572);
             } else if (type.contains("percentage"))
             {
                 DecimalFormat formatter = new DecimalFormat("#.##");
@@ -122,6 +123,12 @@ public class StatisticsReader extends IntentService
 
     private Question generateMultipleChoice(String year, String type, String group, String value)
     {
+        if (!value.contains(".") && !value.contains("$"))
+        {
+            DecimalFormat formatter = new DecimalFormat("###,###,###");
+            int population = Integer.parseInt(value);
+            value = formatter.format(population);
+        }
         String q = "In " + year + ", what was the " + type + " for " + group + "?";
         String cf = "In " + year + ", the " + type + " for " + group + " was " + value;
         return new Question(-1, q, type, value, cf, false);
