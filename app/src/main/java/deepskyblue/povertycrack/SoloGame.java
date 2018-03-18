@@ -137,7 +137,7 @@ public class SoloGame extends AppCompatActivity
         mc.setVisibility(View.VISIBLE);
 
         String[] Answers = new String[4];
-        String number = question.answer.replace(",", "").replace("$","");
+        String number = question.answer.replace(",", "").replace("$","").replace(".","");
         int correctAnswerTemp = Integer.parseInt(number);
         int random = (int) (Math.random() * 4);
         Answers[random] = question.answer;

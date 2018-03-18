@@ -40,36 +40,7 @@ public class StatisticsReader extends IntentService
     @Override
     protected void onHandleIntent(Intent service)
     {
-        System.out.println("Service started -------------------------------------");
-        AssetManager am = getApplicationContext().getAssets();
-        InputStream is = null;
-        Workbook wb = null;
-        try
-        {
-            is = am.open("statistics.xls");
-            wb = Workbook.getWorkbook(is);
-        } catch (IOException e)
-        {
-            e.printStackTrace();
-        } catch (BiffException e)
-        {
-            e.printStackTrace();
-        }
-        Sheet s = wb.getSheet(0);
-        //System.out.println(s.getCell(0,0).getContents());
-        int row = s.getRows();
-        int col = s.getColumns();
-
-        String questionString = "";
-        LinkedList<String> factz = new LinkedList<>();
-
-        for (int i = 0; i < row; i++)
-        {
-            questionString = "In " + s.getCell(0,i).getContents() + ", the " + s.getCell(1,i).getContents() + " for " + s.getCell(2,i).getContents() + " is " + s.getCell(3,i).getContents() + ".";
-            factz.add(questionString);
-        }
         generateQuestions();
-
     }
 
     private void generateQuestions(){
@@ -108,18 +79,6 @@ public class StatisticsReader extends IntentService
             }
         }
     }
-    /*
-    private String createIncomeQuestion(String year, String type, String group, String value){
-
-    }
-
-    private String createPopulationInPovertyQuestion(String year, String type, String group, String value){
-
-    }
-
-    private String createChildrenInPovertyQuestion(String year, String type, String group, String value){
-
-    }*/
 
     private Question generateTrueFalse(String year, String type, String group, String value){
         String q;
