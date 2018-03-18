@@ -8,12 +8,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Collections;
 import java.util.LinkedList;
+
 import jxl.Sheet;
 import jxl.read.biff.BiffException;
 
@@ -82,39 +84,55 @@ public class MainActivity extends AppCompatActivity {
         AssetManager am = getApplicationContext().getAssets();
         InputStream is = null;
         jxl.Workbook wb = null;
-        try
-        {
+        try {
             /*
-            The asset manager opens up the specified folder from the app assets and sets the Input
-            Stream (is) to
+            The asset manager opens up the specified folder from the app assets and feeds the Input
+            Stream (is) that information. Afterwords, the app creates a Workbook who then gets its
+            information from the InputStream and locks it down for later use when accessing Sheet
+            data. InputStream(is) is closed as it is currently no longer needed.
              */
             is = am.open("focused_statistics.xls");
             wb = jxl.Workbook.getWorkbook(is);
             is.close();
-        } catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
-        } catch (BiffException e)
-        {
+        } catch (BiffException e) {
             e.printStackTrace();
         }
+        /*
+        Sheet s will house information from the Workbook from the first sheet (0) that can be provide
+        information relative to rows, columns and cells.
+        */
         Sheet s = wb.getSheet(0);
         int rows = s.getRows();
-        int random = (int)(Math.random() * rows);
-        String arg1 = s.getCell(0,random).getContents();
-        String arg2 = s.getCell(1,random).getContents();
-        String arg3 = s.getCell(2,random).getContents();
-        String arg4 = s.getCell(3,random).getContents();
+        /*
+        The structure of the excel file is set in such a way that it provides information of
+        constants from left to right. We use a random number generator to choose one of the rows to
+        randomly select a fact of a different subject.
+        */
+        int random = (int) (Math.random() * rows);
+        String arg1 = s.getCell(0, random).getContents();
+        String arg2 = s.getCell(1, random).getContents();
+        String arg3 = s.getCell(2, random).getContents();
+        String arg4 = s.getCell(3, random).getContents();
 
-        String randomFactText = "Did you know: In " +arg1+
-                ", the " +arg2+ " for " +arg3+ " was " +arg4 + ".";
+        /*
+        As the cells are arranged in a certain order, we created a template to plug those constants
+        in making generic question that can be recycled repeatedly for other questions.
+         */
+        String randomFactText = "Did you know: In " + arg1 +
+                ", the " + arg2 + " for " + arg3 + " was " + arg4 + ".";
+        //Sets the generated random fact to the textview in the homescreen.
         TextView randomFact = findViewById(R.id.dykFact);
         randomFact.setText(randomFactText);
 
-        final double randomURL = Math.random()* urlList.size();
+        //A random url is selected from our urlList and provides an actual link to that site.
+        final double randomURL = Math.random() * urlList.size();
+        //makes an instance to replace homescreen textfield with "Learn More Here" replacement.
         TextView urlTextView = findViewById(R.id.factURL);
         String textPlaceholder = "Learn More Here";
         urlTextView.setText(textPlaceholder);
+        //makes the textview become clickable, allowing for the user to be taken to a random site.
         urlTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
