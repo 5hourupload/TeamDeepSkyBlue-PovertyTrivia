@@ -11,7 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8585e0db-c586-4a65-bbf7-833dd31feea4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java" afterPath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,15 +76,15 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="119" column="8" lean-forward="false" selection-start-line="119" selection-start-column="8" selection-end-line="119" selection-end-column="8" />
+            <state relative-caret-position="424">
+              <caret line="122" column="31" lean-forward="false" selection-start-line="122" selection-start-column="31" selection-end-line="122" selection-end-column="31" />
               <folding>
                 <element signature="e#1692#1935#0" expanded="true" />
                 <element signature="e#1934#1935#0" expanded="true" />
                 <element signature="e#2031#2278#0" expanded="true" />
                 <element signature="e#2277#2278#0" expanded="true" />
-                <element signature="e#4361#4687#0" expanded="true" />
-                <element signature="e#4686#4687#0" expanded="true" />
+                <element signature="e#4350#4676#0" expanded="true" />
+                <element signature="e#4675#4676#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -95,8 +94,11 @@
         <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
           <provider editor-type-id="text-editor">
             <state relative-caret-position="2924">
-              <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-              <folding />
+              <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+              <folding>
+                <marker date="1521345274138" expanded="true" signature="2525:2828" ph="..." />
+                <marker date="1521345274138" expanded="true" signature="2844:3519" ph="..." />
+              </folding>
             </state>
           </provider>
           <provider selected="true" editor-type-id="android-designer2">
@@ -2539,8 +2541,8 @@
             <element signature="e#1934#1935#0" expanded="true" />
             <element signature="e#2031#2278#0" expanded="true" />
             <element signature="e#2277#2278#0" expanded="true" />
-            <element signature="e#4361#4687#0" expanded="true" />
-            <element signature="e#4686#4687#0" expanded="true" />
+            <element signature="e#4350#4676#0" expanded="true" />
+            <element signature="e#4675#4676#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2575,8 +2577,8 @@
             <element signature="e#1934#1935#0" expanded="true" />
             <element signature="e#2031#2278#0" expanded="true" />
             <element signature="e#2277#2278#0" expanded="true" />
-            <element signature="e#4361#4687#0" expanded="true" />
-            <element signature="e#4686#4687#0" expanded="true" />
+            <element signature="e#4350#4676#0" expanded="true" />
+            <element signature="e#4675#4676#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2613,8 +2615,8 @@
             <element signature="e#1934#1935#0" expanded="true" />
             <element signature="e#2031#2278#0" expanded="true" />
             <element signature="e#2277#2278#0" expanded="true" />
-            <element signature="e#4361#4687#0" expanded="true" />
-            <element signature="e#4686#4687#0" expanded="true" />
+            <element signature="e#4350#4676#0" expanded="true" />
+            <element signature="e#4675#4676#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2673,8 +2675,8 @@
             <element signature="e#1934#1935#0" expanded="true" />
             <element signature="e#2031#2278#0" expanded="true" />
             <element signature="e#2277#2278#0" expanded="true" />
-            <element signature="e#4361#4687#0" expanded="true" />
-            <element signature="e#4686#4687#0" expanded="true" />
+            <element signature="e#4350#4676#0" expanded="true" />
+            <element signature="e#4675#4676#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2725,8 +2727,8 @@
             <element signature="e#1934#1935#0" expanded="true" />
             <element signature="e#2031#2278#0" expanded="true" />
             <element signature="e#2277#2278#0" expanded="true" />
-            <element signature="e#4361#4687#0" expanded="true" />
-            <element signature="e#4686#4687#0" expanded="true" />
+            <element signature="e#4350#4676#0" expanded="true" />
+            <element signature="e#4675#4676#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2753,8 +2755,8 @@
             <element signature="e#1934#1935#0" expanded="true" />
             <element signature="e#2031#2278#0" expanded="true" />
             <element signature="e#2277#2278#0" expanded="true" />
-            <element signature="e#4361#4687#0" expanded="true" />
-            <element signature="e#4686#4687#0" expanded="true" />
+            <element signature="e#4350#4676#0" expanded="true" />
+            <element signature="e#4675#4676#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2925,8 +2927,11 @@
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="2924">
-          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding />
+          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding>
+            <marker date="1521345274138" expanded="true" signature="2525:2828" ph="..." />
+            <marker date="1521345274138" expanded="true" signature="2844:3519" ph="..." />
+          </folding>
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
@@ -2948,15 +2953,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="119" column="8" lean-forward="false" selection-start-line="119" selection-start-column="8" selection-end-line="119" selection-end-column="8" />
+        <state relative-caret-position="424">
+          <caret line="122" column="31" lean-forward="false" selection-start-line="122" selection-start-column="31" selection-end-line="122" selection-end-column="31" />
           <folding>
             <element signature="e#1692#1935#0" expanded="true" />
             <element signature="e#1934#1935#0" expanded="true" />
             <element signature="e#2031#2278#0" expanded="true" />
             <element signature="e#2277#2278#0" expanded="true" />
-            <element signature="e#4361#4687#0" expanded="true" />
-            <element signature="e#4686#4687#0" expanded="true" />
+            <element signature="e#4350#4676#0" expanded="true" />
+            <element signature="e#4675#4676#0" expanded="true" />
           </folding>
         </state>
       </provider>

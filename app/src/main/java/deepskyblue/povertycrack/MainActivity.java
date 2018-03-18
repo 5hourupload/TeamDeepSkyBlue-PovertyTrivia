@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
         randomFact.setText(randomFactText);
 
         final double randomURL = Math.random()* urlList.size();
-        TextView urlTextView = (TextView) findViewById(R.id.factURL);
+        TextView urlTextView = findViewById(R.id.factURL);
         String textPlaceholder = "Learn More Here";
         urlTextView.setText(textPlaceholder);
         urlTextView.setOnClickListener(new View.OnClickListener() {
