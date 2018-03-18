@@ -54,7 +54,7 @@
 		android:layout_marginTop="8dp"
 		android:text="fact_placeholder"
 		android:textColor="@color/smokeWhite"
-		android:textSize="40dp"
+		android:textSize="35dp"
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
