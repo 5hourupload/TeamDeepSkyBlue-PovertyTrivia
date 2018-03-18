@@ -19,19 +19,25 @@ public class ResultScreen extends AppCompatActivity
 
     private int wrongCount = 0;
     private int rightCount = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.resultscreen);
+        //Resets count for play again option
+        wrongCount = 0;
+        rightCount = 0;
 
         Question[] questions = results.toArray(new Question[results.size()]);
 
-        for (int i = 0; i < results.size(); i++) {
-            if (results.get(i).correct) {
+        for (int i = 0; i < results.size(); i++)
+        {
+            if (results.get(i).correct)
+            {
                 rightCount++;
-            }
-            else {
+            } else
+            {
                 wrongCount++;
             }
         }
