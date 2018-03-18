@@ -41,15 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(newIntent);
             }
         });
-        TextView testtest = findViewById(R.id.testtest);
-        testtest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent newIntent = new Intent(MainActivity.this, ResultScreen.class);
-                startActivity(newIntent);
-            }
-        });
-
+        
         //URL list of helpful sites related to poverty
         final LinkedList<String> urlList = new LinkedList<>();
 
