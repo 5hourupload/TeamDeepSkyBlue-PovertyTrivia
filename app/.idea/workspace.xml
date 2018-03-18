@@ -11,6 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8585e0db-c586-4a65-bbf7-833dd31feea4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java" afterPath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java" afterPath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,28 +59,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StatisticsReader.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StatisticsReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="103" column="5" lean-forward="false" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
-              <folding />
+            <state relative-caret-position="152">
+              <caret line="42" column="28" lean-forward="false" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+              <folding>
+                <element signature="e#955#956#0" expanded="true" />
+                <element signature="e#983#984#0" expanded="true" />
+                <element signature="e#1053#1054#0" expanded="true" />
+                <element signature="e#1088#1089#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="97" column="51" lean-forward="true" selection-start-line="97" selection-start-column="51" selection-end-line="97" selection-end-column="51" />
+            <state relative-caret-position="356">
+              <caret line="93" column="37" lean-forward="false" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
               <folding>
-                <element signature="e#2120#2372#0" expanded="true" />
-                <element signature="e#2371#2372#0" expanded="true" />
-                <marker date="1521341005936" expanded="false" signature="3522:3617" ph="(view) → {" />
-                <marker date="1521341005936" expanded="false" signature="3833:3848" ph="}" />
+                <element signature="e#1637#1880#0" expanded="true" />
+                <element signature="e#1879#1880#0" expanded="true" />
+                <element signature="e#1976#2223#0" expanded="true" />
+                <element signature="e#2222#2223#0" expanded="true" />
+                <marker date="1521344312022" expanded="false" signature="3605:3700" ph="(view) → {" />
+                <marker date="1521344312022" expanded="false" signature="3916:3931" ph="}" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="2924">
+              <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
@@ -1821,8 +1842,8 @@
         <option value="$PROJECT_DIR$/src/main/res/layout/slider_template.xml" />
         <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java" />
         <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/Question.java" />
-        <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -2514,10 +2535,12 @@
         <state relative-caret-position="170">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <element signature="e#2120#2372#0" expanded="true" />
-            <element signature="e#2371#2372#0" expanded="true" />
-            <marker date="1521341005936" expanded="false" signature="3522:3617" ph="(view) → {" />
-            <marker date="1521341005936" expanded="false" signature="3833:3848" ph="}" />
+            <element signature="e#1637#1880#0" expanded="true" />
+            <element signature="e#1879#1880#0" expanded="true" />
+            <element signature="e#1976#2223#0" expanded="true" />
+            <element signature="e#2222#2223#0" expanded="true" />
+            <marker date="1521344312022" expanded="false" signature="3605:3700" ph="(view) → {" />
+            <marker date="1521344312022" expanded="false" signature="3916:3931" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2526,7 +2549,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2550">
           <caret line="96" column="83" lean-forward="false" selection-start-line="96" selection-start-column="83" selection-end-line="96" selection-end-column="83" />
-          <folding />
+          <folding>
+            <element signature="e#955#956#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#1053#1054#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2543,10 +2571,12 @@
         <state relative-caret-position="170">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding>
-            <element signature="e#2120#2372#0" expanded="true" />
-            <element signature="e#2371#2372#0" expanded="true" />
-            <marker date="1521341005936" expanded="false" signature="3522:3617" ph="(view) → {" />
-            <marker date="1521341005936" expanded="false" signature="3833:3848" ph="}" />
+            <element signature="e#1637#1880#0" expanded="true" />
+            <element signature="e#1879#1880#0" expanded="true" />
+            <element signature="e#1976#2223#0" expanded="true" />
+            <element signature="e#2222#2223#0" expanded="true" />
+            <marker date="1521344312022" expanded="false" signature="3605:3700" ph="(view) → {" />
+            <marker date="1521344312022" expanded="false" signature="3916:3931" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2555,7 +2585,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2516">
           <caret line="93" column="9" lean-forward="false" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
-          <folding />
+          <folding>
+            <element signature="e#955#956#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#1053#1054#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2574,10 +2609,12 @@
         <state relative-caret-position="162">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#2120#2372#0" expanded="true" />
-            <element signature="e#2371#2372#0" expanded="true" />
-            <marker date="1521341005936" expanded="false" signature="3522:3617" ph="(view) → {" />
-            <marker date="1521341005936" expanded="false" signature="3833:3848" ph="}" />
+            <element signature="e#1637#1880#0" expanded="true" />
+            <element signature="e#1879#1880#0" expanded="true" />
+            <element signature="e#1976#2223#0" expanded="true" />
+            <element signature="e#2222#2223#0" expanded="true" />
+            <marker date="1521344312022" expanded="false" signature="3605:3700" ph="(view) → {" />
+            <marker date="1521344312022" expanded="false" signature="3916:3931" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2632,10 +2669,12 @@
         <state relative-caret-position="54">
           <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
           <folding>
-            <element signature="e#2120#2372#0" expanded="true" />
-            <element signature="e#2371#2372#0" expanded="true" />
-            <marker date="1521341005936" expanded="false" signature="3522:3617" ph="(view) → {" />
-            <marker date="1521341005936" expanded="false" signature="3833:3848" ph="}" />
+            <element signature="e#1637#1880#0" expanded="true" />
+            <element signature="e#1879#1880#0" expanded="true" />
+            <element signature="e#1976#2223#0" expanded="true" />
+            <element signature="e#2222#2223#0" expanded="true" />
+            <marker date="1521344312022" expanded="false" signature="3605:3700" ph="(view) → {" />
+            <marker date="1521344312022" expanded="false" signature="3916:3931" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2682,10 +2721,12 @@
         <state relative-caret-position="54">
           <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
           <folding>
-            <element signature="e#2120#2372#0" expanded="true" />
-            <element signature="e#2371#2372#0" expanded="true" />
-            <marker date="1521341005936" expanded="false" signature="3522:3617" ph="(view) → {" />
-            <marker date="1521341005936" expanded="false" signature="3833:3848" ph="}" />
+            <element signature="e#1637#1880#0" expanded="true" />
+            <element signature="e#1879#1880#0" expanded="true" />
+            <element signature="e#1976#2223#0" expanded="true" />
+            <element signature="e#2222#2223#0" expanded="true" />
+            <marker date="1521344312022" expanded="false" signature="3605:3700" ph="(view) → {" />
+            <marker date="1521344312022" expanded="false" signature="3916:3931" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2708,10 +2749,12 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2120#2372#0" expanded="true" />
-            <element signature="e#2371#2372#0" expanded="true" />
-            <marker date="1521341005936" expanded="false" signature="3522:3617" ph="(view) → {" />
-            <marker date="1521341005936" expanded="false" signature="3833:3848" ph="}" />
+            <element signature="e#1637#1880#0" expanded="true" />
+            <element signature="e#1879#1880#0" expanded="true" />
+            <element signature="e#1976#2223#0" expanded="true" />
+            <element signature="e#2222#2223#0" expanded="true" />
+            <marker date="1521344312022" expanded="false" signature="3605:3700" ph="(view) → {" />
+            <marker date="1521344312022" expanded="false" signature="3916:3931" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2804,17 +2847,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/true_false.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="2322">
-          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest">
         <state />
@@ -2890,24 +2922,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="97" column="51" lean-forward="true" selection-start-line="97" selection-start-column="51" selection-end-line="97" selection-end-column="51" />
-          <folding>
-            <element signature="e#2120#2372#0" expanded="true" />
-            <element signature="e#2371#2372#0" expanded="true" />
-            <marker date="1521341005936" expanded="false" signature="3522:3617" ph="(view) → {" />
-            <marker date="1521341005936" expanded="false" signature="3833:3848" ph="}" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="2924">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="103" column="5" lean-forward="false" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
-          <folding />
+        <state relative-caret-position="152">
+          <caret line="42" column="28" lean-forward="false" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+          <folding>
+            <element signature="e#955#956#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#1053#1054#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="93" column="37" lean-forward="false" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+          <folding>
+            <element signature="e#1637#1880#0" expanded="true" />
+            <element signature="e#1879#1880#0" expanded="true" />
+            <element signature="e#1976#2223#0" expanded="true" />
+            <element signature="e#2222#2223#0" expanded="true" />
+            <marker date="1521344312022" expanded="false" signature="3605:3700" ph="(view) → {" />
+            <marker date="1521344312022" expanded="false" signature="3916:3931" ph="}" />
+          </folding>
         </state>
       </provider>
     </entry>

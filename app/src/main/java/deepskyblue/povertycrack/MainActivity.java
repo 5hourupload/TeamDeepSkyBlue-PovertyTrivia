@@ -21,6 +21,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Random;
 
@@ -31,13 +32,14 @@ public class MainActivity extends AppCompatActivity {
     static LinkedList<Question> sliderQuestions = new LinkedList<>();
     static LinkedList<Question> results = new LinkedList<>();
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Collections.shuffle(multChoiceQuestions);
+        Collections.shuffle(trueFalseQuestions);
+        Collections.shuffle(sliderQuestions);
 
         Intent statistics = new Intent(MainActivity.this, StatisticsReader.class);
         startService(statistics);
@@ -85,7 +87,12 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-//        System.out.println(urlList);
+
+        Question selectedQ = multChoiceQuestions.get((int)(Math.random() * multChoiceQuestions.size()));
+        String randFact = "Did you know: " +selectedQ.completeFact;
+        TextView randomFact = findViewById(R.id.dykFact);
+        randomFact.setText(randFact);
+
         final double randomURL = Math.random()* urlList.size();
         TextView urlTextView = (TextView) findViewById(R.id.factURL);
         String textPlaceholder = "Learn More Here";
