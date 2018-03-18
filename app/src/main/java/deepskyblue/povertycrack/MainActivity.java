@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         {
             is = am.open("statistics.xls");
             wb = jxl.Workbook.getWorkbook(is);
+            is.close();
         } catch (IOException e)
         {
             e.printStackTrace();
@@ -96,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
         }
         Sheet s = wb.getSheet(0);
         int rows = s.getRows();
-
         int random = (int)(Math.random() * rows);
         String arg1 = s.getCell(0,random).getContents();
         String arg2 = s.getCell(1,random).getContents();

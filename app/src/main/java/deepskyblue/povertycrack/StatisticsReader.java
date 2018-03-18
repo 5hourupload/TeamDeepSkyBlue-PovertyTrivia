@@ -40,6 +40,7 @@ public class StatisticsReader extends IntentService
     @Override
     protected void onHandleIntent(Intent service)
     {
+
         generateQuestions();
     }
 
@@ -51,6 +52,7 @@ public class StatisticsReader extends IntentService
         {
             is = am.open("statistics.xls");
             wb = Workbook.getWorkbook(is);
+            is.close();
         } catch (IOException e)
         {
             e.printStackTrace();
@@ -60,6 +62,19 @@ public class StatisticsReader extends IntentService
         }
         Sheet s = wb.getSheet(0);
         int rows = s.getRows();
+
+        for (int row = 0; row < s.getRows(); row++)
+        {
+            for (int col = 0; col < s.getColumns(); col++)
+            {
+                System.out.print(s.getCell(col,row).getContents());
+            }
+            System.out.println(" ");
+        }
+
+        System.out.println(s.getRows());
+
+
 
         for(int i = 0; i < rows; i++){
             String year = s.getCell(0,i).getContents();
