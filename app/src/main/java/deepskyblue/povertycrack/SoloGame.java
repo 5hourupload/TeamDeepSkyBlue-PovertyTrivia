@@ -17,7 +17,12 @@ import static deepskyblue.povertycrack.MainActivity.results;
 import static deepskyblue.povertycrack.MainActivity.sliderQuestions;
 import static deepskyblue.povertycrack.MainActivity.trueFalseQuestions;
 
+/**
+ * Begins Trivia questions
+ * activated by start button.
+ */
 public class SoloGame extends AppCompatActivity {
+    //initializes the variables
     private int count = 0;
     public static int streak = 0;
     public static int highScore = 0;
@@ -26,6 +31,10 @@ public class SoloGame extends AppCompatActivity {
     ConstraintLayout mc;
     ConstraintLayout qr;
 
+    /**
+     * correlates xml files
+     * @param savedInstanceState retains information
+     */
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,12 +46,15 @@ public class SoloGame extends AppCompatActivity {
         newQuestion();
     }
 
-    //every new question that is called in main calls this method
-    //This method calls the appropriate method to execute the question
+    /*
+    creates a new question object that holds information for the specific question selected.
+    Uses stacks.
+     */
 
     private void newQuestion() {
         Question currentQuestion;
         count++;
+        //randomly selects a random question, either true/false or multiple choice.
         switch ((int) (Math.random() * 2)) {
             case 0:
                 currentQuestion = trueFalseQuestions.pop();
@@ -56,10 +68,12 @@ public class SoloGame extends AppCompatActivity {
                 break;
         }
 
+        //creates textview object and sets the text.
         TextView streakCounter = findViewById(R.id.streakCounter);
         String streakText = "Streak: " + streak;
         streakCounter.setText(streakText);
 
+        //creates textview object and sets the text
         TextView scoreCounter = findViewById(R.id.scoreCounter);
         String scoreText = "Score: " + score;
         scoreCounter.setText(scoreText);
@@ -83,6 +97,7 @@ public class SoloGame extends AppCompatActivity {
     }
 
 
+    //analyzes player input, and determines score and streak.
     private void checkS(int sliderSelection, Question question) {
         if (sliderSelection == Integer.parseInt(question.answer)) {
             question.correct = true;
@@ -114,6 +129,7 @@ public class SoloGame extends AppCompatActivity {
         //sets up onclick listeners for both buttons that call the check function above
         True.setOnClickListener(new View.OnClickListener() {
             @Override
+            //begins checkAnswer.
             public void onClick(View view) {
                 checkAnswer("True", question);
             }
@@ -127,6 +143,7 @@ public class SoloGame extends AppCompatActivity {
         });
     }
 
+    //Formats multiple choice question.
     private void multipleChoice(final Question question) {
         TextView Q = findViewById(R.id.questionText);
         Q.setText(question.question);
@@ -135,9 +152,11 @@ public class SoloGame extends AppCompatActivity {
         mc.setVisibility(View.VISIBLE);
         System.out.println(question.answer);
 
+        //Creates a holder for answers
         String[] Answers = new String[4];
         String number = question.answer.replace(",", "").replace("$", "").replace("-", "");
         int correctAnswerTemp = -1;
+        //Tries to convert correctanswertemp into an integer.
         try {
             correctAnswerTemp = Integer.parseInt(number);
 
@@ -146,6 +165,7 @@ public class SoloGame extends AppCompatActivity {
         }
         int random = (int) (Math.random() * 4);
         Answers[random] = question.answer;
+        //loops through four options and generates a possible answer.
         for (int i = 0; i < 4; i++) {
             if (i == random) continue;
             int value = correctAnswerTemp + (int) Math.round(((Math.random() * 10) - 5) * 5000);
@@ -164,7 +184,7 @@ public class SoloGame extends AppCompatActivity {
                 Answers[i] = formatter.format(Math.abs(value));
             }
         }
-        //final String correctAnswer = correctAnswerTemp;
+        //sets finalized formatted answer.
         final String[] finalAnswers = Answers;
         Button buttonOption1 = findViewById(R.id.questionOption1);
         buttonOption1.setText(finalAnswers[0]);
@@ -174,6 +194,7 @@ public class SoloGame extends AppCompatActivity {
                 checkAnswer(finalAnswers[0], question);
             }
         });
+        //creates four buttons.
         Button buttonOption2 = findViewById(R.id.questionOption2);
         buttonOption2.setText(finalAnswers[1]);
         buttonOption2.setOnClickListener(new View.OnClickListener() {
@@ -201,18 +222,21 @@ public class SoloGame extends AppCompatActivity {
     }
 
 
+    //resets questions.
     private void clearLayouts() {
         tf.setVisibility(View.INVISIBLE);
         mc.setVisibility(View.INVISIBLE);
         qr.setVisibility(View.INVISIBLE);
     }
 
+    //resets previous inputs.
     private void handleResults(String answer, Question question) {
         results.add(question);
         clearLayouts();
         qr.setVisibility(View.VISIBLE);
         TextView comment = findViewById(R.id.comment);
         TextView correctAnswer = findViewById(R.id.correct_answer);
+        //makes the answer screen.
         if (question.correct) {
             comment.setText("You guessed correctly!");
             correctAnswer.setText(question.answer);
@@ -232,6 +256,7 @@ public class SoloGame extends AppCompatActivity {
             }
         });
 
+        //checks for endgame condition(chain of two wrong.)
         if (results.size() >= 2) {
             if (!results.get(results.size() - 1).correct && !results.get(results.size() - 2).correct) {
                 Intent newIntent = new Intent(getApplicationContext(), ResultScreen.class);
