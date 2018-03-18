@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(newIntent);
             }
         });
-        
+
         //URL list of helpful sites related to poverty
         final LinkedList<String> urlList = new LinkedList<>();
 

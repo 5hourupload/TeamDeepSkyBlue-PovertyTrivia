@@ -157,6 +157,7 @@ public class SoloGame extends AppCompatActivity {
             int value = correctAnswerTemp + (int) Math.round(((Math.random() * 10) - 5) * 5000);
             DecimalFormat formatter = new DecimalFormat("##,###");
             Answers[i] = "$" + formatter.format(value);
+
         }
         //final String correctAnswer = correctAnswerTemp;
         final String[] finalAnswers = Answers;
@@ -264,6 +265,7 @@ public class SoloGame extends AppCompatActivity {
             if (!results.get(results.size() - 1).correct && !results.get(results.size() - 2).correct) {
                 Intent newIntent = new Intent(getApplicationContext(), ResultScreen.class);
                 startActivity(newIntent);
+                finish();
             }
         }
     }

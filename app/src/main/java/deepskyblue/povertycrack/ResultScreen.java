@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -59,5 +60,15 @@ public class ResultScreen extends AppCompatActivity
                     }
                 }
         );
+
+        Button startAgain = findViewById(R.id.startAgain);
+        startAgain.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                finish();
+            }
+        });
     }
 }
