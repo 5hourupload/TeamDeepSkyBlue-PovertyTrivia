@@ -28,9 +28,6 @@ public class SoloGame extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.questionbox_template);
 
-        Intent statistics = new Intent(getApplicationContext(), StatisticsReader.class);
-        startService(statistics);
-
 
         tf = findViewById(R.id.tf_view);
         mc = findViewById(R.id.mc_view);

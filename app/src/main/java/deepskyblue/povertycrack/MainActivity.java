@@ -38,8 +38,9 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Intent newIntent = new Intent(this, StatisticsReader.class);
-        //startActivity(newIntent);
+
+        Intent statistics = new Intent(MainActivity.this, StatisticsReader.class);
+        startService(statistics);
 
         Button buttonSolo = findViewById(R.id.buttonSolo);
         buttonSolo.setOnClickListener(new View.OnClickListener() {
@@ -55,14 +56,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent newIntent = new Intent(MainActivity.this, ResultScreen.class);
                 startActivity(newIntent);
-            }
-        });
-        TextView d = findViewById(R.id.dykFact);
-        d.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent statistics = new Intent(MainActivity.this, StatisticsReader.class);
-                startService(statistics);
             }
         });
 
