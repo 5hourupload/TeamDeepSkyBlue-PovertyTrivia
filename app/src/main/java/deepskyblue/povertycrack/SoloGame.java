@@ -21,8 +21,9 @@ import static deepskyblue.povertycrack.MainActivity.trueFalseQuestions;
 public class SoloGame extends AppCompatActivity
 {
     private int count = 0;
-    private int streak = 0;
-    private int score = 0;
+    public static int streak = 0;
+    public static int highScore = 0;
+    public static int score = 0;
     ConstraintLayout tf;
     ConstraintLayout mc;
     ConstraintLayout sl;
@@ -97,9 +98,10 @@ public class SoloGame extends AppCompatActivity
             streak = 0;
             score--;
         }
+        if(score > highScore){
+            highScore = score;
+        }
         handleResults(selectedA, question);
-
-
     }
 
 
@@ -122,6 +124,9 @@ public class SoloGame extends AppCompatActivity
         {
             streak = 0;
             score--;
+        }
+        if(score > highScore){
+            highScore = score;
         }
         handleResults(Integer.toString(sliderSelection), question);
     }
@@ -237,11 +242,8 @@ public class SoloGame extends AppCompatActivity
         clearLayouts();
         sl.setVisibility(View.VISIBLE);
         final SeekBar slider = findViewById(R.id.slider);
-        slider.setMax(100000);
-        slider.setMax(50000);
-
-        //int newMax = (int)(Integer.parseInt(Answer) + (Integer.parseInt(Answer) * Math.random()));
-        //slider.setMax(newMax);
+        int newMax = (int)(Integer.parseInt(question.answer) + (Integer.parseInt(question.answer) * Math.random()));
+        slider.setMax(newMax);
         Button sliderButton = findViewById(R.id.sliderButton);
         sliderButton.setOnClickListener(new View.OnClickListener()
         {
