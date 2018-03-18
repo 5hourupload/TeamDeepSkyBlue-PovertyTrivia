@@ -48,7 +48,7 @@ public class StatisticsReader extends IntentService
         generateQuestions();
     }
 
-    
+
     private void generateQuestions()
     {
         AssetManager am = getApplicationContext().getAssets();
