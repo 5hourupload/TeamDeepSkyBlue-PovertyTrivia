@@ -12,7 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8585e0db-c586-4a65-bbf7-833dd31feea4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java" afterPath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java" afterPath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -77,15 +76,15 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="93" column="37" lean-forward="false" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+            <state relative-caret-position="308">
+              <caret line="109" column="1" lean-forward="true" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
               <folding>
                 <element signature="e#1637#1880#0" expanded="true" />
                 <element signature="e#1879#1880#0" expanded="true" />
                 <element signature="e#1976#2223#0" expanded="true" />
                 <element signature="e#2222#2223#0" expanded="true" />
-                <marker date="1521344312022" expanded="false" signature="3605:3700" ph="(view) → {" />
-                <marker date="1521344312022" expanded="false" signature="3916:3931" ph="}" />
+                <marker date="1521344342498" expanded="false" signature="3605:3700" ph="(view) → {" />
+                <marker date="1521344342498" expanded="false" signature="3916:3931" ph="}" />
               </folding>
             </state>
           </provider>
@@ -2539,8 +2538,8 @@
             <element signature="e#1879#1880#0" expanded="true" />
             <element signature="e#1976#2223#0" expanded="true" />
             <element signature="e#2222#2223#0" expanded="true" />
-            <marker date="1521344312022" expanded="false" signature="3605:3700" ph="(view) → {" />
-            <marker date="1521344312022" expanded="false" signature="3916:3931" ph="}" />
+            <marker date="1521344342498" expanded="false" signature="3605:3700" ph="(view) → {" />
+            <marker date="1521344342498" expanded="false" signature="3916:3931" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2575,8 +2574,8 @@
             <element signature="e#1879#1880#0" expanded="true" />
             <element signature="e#1976#2223#0" expanded="true" />
             <element signature="e#2222#2223#0" expanded="true" />
-            <marker date="1521344312022" expanded="false" signature="3605:3700" ph="(view) → {" />
-            <marker date="1521344312022" expanded="false" signature="3916:3931" ph="}" />
+            <marker date="1521344342498" expanded="false" signature="3605:3700" ph="(view) → {" />
+            <marker date="1521344342498" expanded="false" signature="3916:3931" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2613,8 +2612,8 @@
             <element signature="e#1879#1880#0" expanded="true" />
             <element signature="e#1976#2223#0" expanded="true" />
             <element signature="e#2222#2223#0" expanded="true" />
-            <marker date="1521344312022" expanded="false" signature="3605:3700" ph="(view) → {" />
-            <marker date="1521344312022" expanded="false" signature="3916:3931" ph="}" />
+            <marker date="1521344342498" expanded="false" signature="3605:3700" ph="(view) → {" />
+            <marker date="1521344342498" expanded="false" signature="3916:3931" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2673,8 +2672,8 @@
             <element signature="e#1879#1880#0" expanded="true" />
             <element signature="e#1976#2223#0" expanded="true" />
             <element signature="e#2222#2223#0" expanded="true" />
-            <marker date="1521344312022" expanded="false" signature="3605:3700" ph="(view) → {" />
-            <marker date="1521344312022" expanded="false" signature="3916:3931" ph="}" />
+            <marker date="1521344342498" expanded="false" signature="3605:3700" ph="(view) → {" />
+            <marker date="1521344342498" expanded="false" signature="3916:3931" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2725,8 +2724,8 @@
             <element signature="e#1879#1880#0" expanded="true" />
             <element signature="e#1976#2223#0" expanded="true" />
             <element signature="e#2222#2223#0" expanded="true" />
-            <marker date="1521344312022" expanded="false" signature="3605:3700" ph="(view) → {" />
-            <marker date="1521344312022" expanded="false" signature="3916:3931" ph="}" />
+            <marker date="1521344342498" expanded="false" signature="3605:3700" ph="(view) → {" />
+            <marker date="1521344342498" expanded="false" signature="3916:3931" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2753,8 +2752,8 @@
             <element signature="e#1879#1880#0" expanded="true" />
             <element signature="e#1976#2223#0" expanded="true" />
             <element signature="e#2222#2223#0" expanded="true" />
-            <marker date="1521344312022" expanded="false" signature="3605:3700" ph="(view) → {" />
-            <marker date="1521344312022" expanded="false" signature="3916:3931" ph="}" />
+            <marker date="1521344342498" expanded="false" signature="3605:3700" ph="(view) → {" />
+            <marker date="1521344342498" expanded="false" signature="3916:3931" ph="}" />
           </folding>
         </state>
       </provider>
@@ -2948,15 +2947,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="93" column="37" lean-forward="false" selection-start-line="93" selection-start-column="37" selection-end-line="93" selection-end-column="37" />
+        <state relative-caret-position="308">
+          <caret line="109" column="1" lean-forward="true" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
           <folding>
             <element signature="e#1637#1880#0" expanded="true" />
             <element signature="e#1879#1880#0" expanded="true" />
             <element signature="e#1976#2223#0" expanded="true" />
             <element signature="e#2222#2223#0" expanded="true" />
-            <marker date="1521344312022" expanded="false" signature="3605:3700" ph="(view) → {" />
-            <marker date="1521344312022" expanded="false" signature="3916:3931" ph="}" />
+            <marker date="1521344342498" expanded="false" signature="3605:3700" ph="(view) → {" />
+            <marker date="1521344342498" expanded="false" signature="3916:3931" ph="}" />
           </folding>
         </state>
       </provider>
