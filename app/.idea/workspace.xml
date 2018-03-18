@@ -11,8 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8585e0db-c586-4a65-bbf7-833dd31feea4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java" afterPath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java" afterPath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,11 +58,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StatisticsReader.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="103" column="5" lean-forward="false" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="98" column="45" lean-forward="false" selection-start-line="98" selection-start-column="45" selection-end-line="98" selection-end-column="45" />
+            <state relative-caret-position="204">
+              <caret line="97" column="51" lean-forward="true" selection-start-line="97" selection-start-column="51" selection-end-line="97" selection-end-column="51" />
               <folding>
                 <element signature="e#2120#2372#0" expanded="true" />
                 <element signature="e#2371#2372#0" expanded="true" />
@@ -1812,8 +1821,8 @@
         <option value="$PROJECT_DIR$/src/main/res/layout/slider_template.xml" />
         <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java" />
         <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/Question.java" />
-        <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java" />
       </list>
     </option>
   </component>
@@ -2873,14 +2882,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4046">
-          <caret line="140" column="37" lean-forward="false" selection-start-line="140" selection-start-column="37" selection-end-line="140" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/Question.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -2891,14 +2892,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="98" column="45" lean-forward="false" selection-start-line="98" selection-start-column="45" selection-end-line="98" selection-end-column="45" />
+        <state relative-caret-position="204">
+          <caret line="97" column="51" lean-forward="true" selection-start-line="97" selection-start-column="51" selection-end-line="97" selection-end-column="51" />
           <folding>
             <element signature="e#2120#2372#0" expanded="true" />
             <element signature="e#2371#2372#0" expanded="true" />
             <marker date="1521341005936" expanded="false" signature="3522:3617" ph="(view) → {" />
             <marker date="1521341005936" expanded="false" signature="3833:3848" ph="}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="103" column="5" lean-forward="false" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
