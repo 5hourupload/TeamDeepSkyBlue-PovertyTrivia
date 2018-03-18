@@ -39,16 +39,15 @@ public class ResultScreen extends AppCompatActivity
                         String question = String.valueOf(parent.getItemAtPosition(position));
                         Toast.makeText(ResultScreen.this, question, Toast.LENGTH_LONG).show();
                         //when clicked displays answer to the question
-//                        sendMessage();
+                        buttonClickFunction();
                     }
                 }
         );
     }
 
-    public void sendMessage(View view)
+    public void buttonClickFunction()
     {
-//        Intent intent = new Intent(this)
+        Intent intent = new Intent(this, Ans.class);
+        startActivity(intent);
     }
-
-
 }

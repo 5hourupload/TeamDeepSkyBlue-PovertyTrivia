@@ -26,7 +26,7 @@ class CustomAdapter extends ArrayAdapter<Question>
         View customView = myInflater.inflate(R.layout.custom_row, parent, false);
 
         Question singleQuestionItem = getItem(position);
-        TextView stringText = (TextView) customView.findViewById(R.id.stringtext);
+        TextView stringText = (TextView) customView.findViewById(R.id.textView);
         ImageView myImage = (ImageView) customView.findViewById(R.id.imageView);
 
         stringText.setText(singleQuestionItem.question);
