@@ -20,10 +20,10 @@ import static deepskyblue.povertycrack.MainActivity.trueFalseQuestions;
 
 public class SoloGame extends AppCompatActivity
 {
-    private int count = 0;
-    private int streak = 0;
-    private int highScore = 0;
-    private int score = 0;
+    public int count = 0;
+    public int streak = 0;
+    public int highScore = 0;
+    public int score = 0;
     ConstraintLayout tf;
     ConstraintLayout mc;
     ConstraintLayout sl;
