@@ -32,10 +32,10 @@ public class ResultScreen extends AppCompatActivity
         //loops through answered questions to check for right and wrongs
         for (int i = 0; i < results.size(); i++)
         {
-            if (results.get(i).correct)
+            if (results.get(i).correct)//question was answered correctly
             {
                 rightCount++;
-            } else
+            } else//question was answered incorrectly
             {
                 wrongCount++;
             }
@@ -49,7 +49,7 @@ public class ResultScreen extends AppCompatActivity
         TextView scoreTally = findViewById(R.id.scoreTally);
         scoreTally.setText("Score: " + SoloGame.score);
 
-        //uses custom adapter to create an image with two rows of text in a single row
+        //uses custom adapter to create an image with two rows of text in a single row through custom_row.xml
         ListAdapter queAdapter = new CustomAdapter(this, questions);
         ListView myListView = (ListView) findViewById(R.id.myListView);
         myListView.setAdapter(queAdapter);
