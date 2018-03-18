@@ -30,6 +30,7 @@ public class SoloGame extends AppCompatActivity {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Establish
         setContentView(R.layout.questionbox_template);
         tf = findViewById(R.id.tf_view);
         mc = findViewById(R.id.mc_view);
@@ -44,7 +45,7 @@ public class SoloGame extends AppCompatActivity {
     private void newQuestion() {
         Question currentQuestion;
         count++;
-        switch ((int) (Math.random() * 2)) {
+        switch (1/*(int) (Math.random() * 2)*/) {
             case 0:
                 currentQuestion = trueFalseQuestions.pop();
                 currentQuestion.num = count;
@@ -166,7 +167,7 @@ public class SoloGame extends AppCompatActivity {
             }
             else{
                 DecimalFormat formatter = new DecimalFormat("###,###,###");
-                Answers[i] = formatter.format(value);
+                Answers[i] = formatter.format(Math.abs(value));
             }
         }
         //final String correctAnswer = correctAnswerTemp;
