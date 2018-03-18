@@ -121,7 +121,8 @@ public class StatisticsReader extends IntentService
                 shift = formatter.format(Math.random() * 1);
             } else
             {
-                shift = Integer.toString((int) ((Math.random() * (100_000)) + 10_000));
+                DecimalFormat formatter = new DecimalFormat("###,###,###");
+                shift = formatter.format(((int)(Math.random() * 100) * (1000)) + 10_000);
             }
             q = "True or False: In " + year + ", the " + type + " for " + group + " was " + shift + "?";
             a = "False";
