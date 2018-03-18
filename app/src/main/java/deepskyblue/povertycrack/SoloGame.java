@@ -22,6 +22,7 @@ public class SoloGame extends AppCompatActivity
 {
     private int count = 0;
     private int streak = 0;
+    private int highScore = 0;
     private int score = 0;
     ConstraintLayout tf;
     ConstraintLayout mc;
@@ -97,9 +98,10 @@ public class SoloGame extends AppCompatActivity
             streak = 0;
             score--;
         }
+        if(score > highScore){
+            highScore = score;
+        }
         handleResults(selectedA, question);
-
-
     }
 
 
@@ -122,6 +124,9 @@ public class SoloGame extends AppCompatActivity
         {
             streak = 0;
             score--;
+        }
+        if(score > highScore){
+            highScore = score;
         }
         handleResults(Integer.toString(sliderSelection), question);
     }
