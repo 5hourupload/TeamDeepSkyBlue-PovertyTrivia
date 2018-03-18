@@ -61,6 +61,8 @@ public class ResultScreen extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
+                //resets game
+                SoloGame.score = 0;
                 finish();
             }
         });
