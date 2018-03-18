@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import static deepskyblue.povertycrack.MainActivity.results;
 
+//opens a list of the questions answered in the trivia with their corresponding answer
 public class ResultScreen extends AppCompatActivity
 {
 
