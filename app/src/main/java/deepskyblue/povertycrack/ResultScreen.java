@@ -64,5 +64,6 @@ public class ResultScreen extends AppCompatActivity
                 finish();
             }
         });
+        results.clear();
     }
 }
