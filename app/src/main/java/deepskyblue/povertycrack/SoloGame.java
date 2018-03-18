@@ -237,6 +237,23 @@ public class SoloGame extends AppCompatActivity
         final SeekBar slider = findViewById(R.id.slider);
         int newMax = (int)(Integer.parseInt(question.answer) + (Integer.parseInt(question.answer) * Math.random()));
         slider.setMax(newMax);
+        slider.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                TextView currentSelected = findViewById(R.id.currentSlider);
+                currentSelected.setText(slider.getProgress());
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
         Button sliderButton = findViewById(R.id.sliderButton);
         sliderButton.setOnClickListener(new View.OnClickListener()
         {
