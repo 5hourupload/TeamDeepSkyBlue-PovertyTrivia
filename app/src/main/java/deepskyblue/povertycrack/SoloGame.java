@@ -155,12 +155,12 @@ public class SoloGame extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             if (i == random) continue;
             int value = correctAnswerTemp + (int) Math.round(((Math.random() * 10) - 5) * 5000);
-            DecimalFormat formatter = new DecimalFormat("##,###");
             if(question.answer.contains("$")){
+                DecimalFormat formatter = new DecimalFormat("##,###");
                 Answers[i] = "$" + formatter.format(value);
             }
             else{
-                Answers[i] = formatter.format(value);
+                Answers[i] = Integer.toString(value);
             }
         }
         //final String correctAnswer = correctAnswerTemp;
