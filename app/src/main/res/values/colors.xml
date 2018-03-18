@@ -7,4 +7,6 @@
     <color name="slateGray">#708090	</color>
     <color name="smokeWhite">#F1F1F1</color>
     <color name="transparent">#00FFFFFF</color>
+    <color name="whiteGray">#DFD9D8</color>
+    <color name="slightGray">#C4C2C2</color>
 </resources>
