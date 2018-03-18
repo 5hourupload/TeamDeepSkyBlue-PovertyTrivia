@@ -34,9 +34,13 @@ public class SoloGame extends AppCompatActivity
         mc = findViewById(R.id.mc_view);
         sl = findViewById(R.id.slider_view);
         qr = findViewById(R.id.question_result);
-        trueFalseQuestions.add(new Question(-1, "What?", "True", " ", false));
-        multChoiceQuestions.add(new Question(-1, "What?", "63893", " ", false));
-        sliderQuestions.add(new Question(-1, "What m8?", "63893", " ", false));
+        for (int i = 0; i < 99999; i++)
+        {
+            trueFalseQuestions.add(new Question(-1, "What?", "True", " ", false));
+            multChoiceQuestions.add(new Question(-1, "What?", "63893", " ", false));
+            sliderQuestions.add(new Question(-1, "What m8?", "63893", " ", false));
+
+        }
         newQuestion();
     }
 
@@ -48,7 +52,7 @@ public class SoloGame extends AppCompatActivity
     {
         count++;
         //currentQuestion = new Question(count, passedQ, passedA, false);
-        switch ((int) (Math.random() * 1) + 2)
+        switch ((int) (Math.random() * 2))
         {
             case 0:
                 currentQuestion = trueFalseQuestions.pop();
@@ -76,7 +80,9 @@ public class SoloGame extends AppCompatActivity
         {
             question.correct = true;
         }
-        results.add(question);
+        handleResults(selectedA, question);
+
+
     }
 
     private void checkMC(int selectedA, Question question)
@@ -85,7 +91,8 @@ public class SoloGame extends AppCompatActivity
         {
             question.correct = true;
         }
-        results.add(question);
+        handleResults(Integer.toString(selectedA), question);
+
     }
 
     private void checkS(int sliderSelection, Question question)
@@ -94,7 +101,7 @@ public class SoloGame extends AppCompatActivity
         {
             question.correct = true;
         }
-        results.add(question);
+        handleResults(Integer.toString(sliderSelection), question);
     }
 
     //Function called for a true or false question
@@ -103,7 +110,8 @@ public class SoloGame extends AppCompatActivity
         TextView Q = findViewById(R.id.questionText);
         Q.setText(question.question);
 
-        tf.setVisibility(View.VISIBLE);        clearLayouts();
+        clearLayouts();
+        tf.setVisibility(View.VISIBLE);
 
         Button True = findViewById(R.id.buttonTrue);
         //sets up onclick listeners for both buttons that call the check function above
@@ -159,7 +167,7 @@ public class SoloGame extends AppCompatActivity
         });
         Button buttonOption2 = findViewById(R.id.questionOption2);
         buttonOption2.setText(Integer.toString(finalAnswers[1]));
-        buttonOption1.setOnClickListener(new View.OnClickListener()
+        buttonOption2.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
@@ -169,7 +177,7 @@ public class SoloGame extends AppCompatActivity
         });
         Button buttonOption3 = findViewById(R.id.questionOption3);
         buttonOption3.setText(Integer.toString(finalAnswers[2]));
-        buttonOption1.setOnClickListener(new View.OnClickListener()
+        buttonOption3.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
@@ -179,7 +187,7 @@ public class SoloGame extends AppCompatActivity
         });
         Button buttonOption4 = findViewById(R.id.questionOption4);
         buttonOption4.setText(Integer.toString(finalAnswers[3]));
-        buttonOption1.setOnClickListener(new View.OnClickListener()
+        buttonOption4.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
@@ -211,12 +219,43 @@ public class SoloGame extends AppCompatActivity
             }
         });
     }
+
     private void clearLayouts()
     {
         tf.setVisibility(View.INVISIBLE);
         mc.setVisibility(View.INVISIBLE);
         sl.setVisibility(View.INVISIBLE);
         qr.setVisibility(View.INVISIBLE);
+    }
+
+    private void handleResults(String answer, Question question)
+    {
+        results.add(question);
+        clearLayouts();
+        qr.setVisibility(View.VISIBLE);
+        TextView comment = findViewById(R.id.comment);
+        TextView correctAnswer = findViewById(R.id.correct_answer);
+        if (question.correct)
+        {
+            comment.setText("You guessed correctly!");
+            correctAnswer.setText(question.answer);
+        }
+        else
+        {
+            comment.setText("Incorrect! You guessed " + answer + ".\n The correct answer is:");
+            correctAnswer.setText(question.answer);
+        }
+
+
+        Button nextQuestion = findViewById(R.id.next_question);
+        nextQuestion.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                newQuestion();
+            }
+        });
     }
 
 }
