@@ -33,6 +33,10 @@ public class StatisticsReader extends IntentService
     {
         super("man");
     }
+    public StatisticsReader(String name)
+    {
+        super("man");
+    }
     @Override
     protected void onHandleIntent(Intent service)
     {
@@ -64,6 +68,8 @@ public class StatisticsReader extends IntentService
             questionString = "In " + s.getCell(0,i).getContents() + ", the " + s.getCell(1,i).getContents() + " for " + s.getCell(2,i).getContents() + " is " + s.getCell(3,i).getContents() + ".";
             factz.add(questionString);
         }
+        generateQuestions();
+
     }
 
     private void generateQuestions(){

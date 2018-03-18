@@ -19,7 +19,6 @@
         </activity>
         <service  android:name=".StatisticsReader">
             android:enabled="true"
-
         </service>
         <activity android:name=".ResultScreen">
         </activity>
