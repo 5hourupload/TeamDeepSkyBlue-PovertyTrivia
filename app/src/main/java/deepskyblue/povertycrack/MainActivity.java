@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         jxl.Workbook wb = null;
         try
         {
-            is = am.open("statistics.xls");
+            is = am.open("focused_statistics.xls");
             wb = jxl.Workbook.getWorkbook(is);
             is.close();
         } catch (IOException e)
