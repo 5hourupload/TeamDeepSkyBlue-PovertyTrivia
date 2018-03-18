@@ -80,7 +80,7 @@ public class SoloGame extends AppCompatActivity
 
         TextView scoreCounter = findViewById(R.id.scoreCounter);
         String scoreText = "Score: " + score;
-        streakCounter.setText(scoreText);
+        scoreCounter.setText(scoreText);
     }
 
     //Check functions for each type of question
@@ -233,7 +233,6 @@ public class SoloGame extends AppCompatActivity
         final SeekBar slider = findViewById(R.id.slider);
         slider.setMax(100000);
         slider.setMax(50000);
-        slider.setKeyProgressIncrement(10);
 
         //int newMax = (int)(Integer.parseInt(Answer) + (Integer.parseInt(Answer) * Math.random()));
         //slider.setMax(newMax);
