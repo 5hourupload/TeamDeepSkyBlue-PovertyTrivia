@@ -7,33 +7,24 @@
     android:background="@drawable/gradient"
     tools:context="deepskyblue.povertycrack.MainActivity">
 
-    <LinearLayout
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.162">
-
-        <Button
-            android:id="@+id/buttonSolo"
-            android:layout_width="@dimen/buttonWidthStandard250"
-            android:layout_height="@dimen/buttonHeightStandard100"
-            android:text="Solo" />
-
-        <!--<Button-->
-        <!--android:id="@+id/buttonMultiplayer"-->
-        <!--android:layout_width="@dimen/buttonWidthStandard250"-->
-        <!--android:layout_height="@dimen/buttonHeightStandard100"-->
-        <!--android:text="Pass n' Play" />-->
-
-    </LinearLayout>
+        android:id="@+id/logo"/>
+    <Button
+        android:id="@+id/buttonSolo"
+        android:layout_width="@dimen/buttonWidthStandard250"
+        android:layout_height="@dimen/buttonHeightStandard100"
+        android:text="Solo"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/testtest"/>
 
 
     <TextView
@@ -44,15 +35,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-
         android:text="Did You Know?"
         android:textSize="25dp"
         android:textColor="@color/smokeWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59" />
+        app:layout_constraintBottom_toTopOf="@+id/dykFact"
+        app:layout_constraintTop_toBottomOf="@id/buttonSolo"/>
 
     <TextView
         android:id="@+id/dykFact"
@@ -64,11 +54,11 @@
         android:layout_marginTop="8dp"
         android:textColor="@color/smokeWhite"
         android:text="@string/text_fill"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/factURL"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintTop_toBottomOf="@id/testtest"
+        />
 
     <TextView
         android:id="@+id/factURL"
@@ -82,10 +72,8 @@
         android:textColor="#00A6F8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.983" />
+        app:layout_constraintTop_toBottomOf="@id/dykFact"/>
 
 
 </android.support.constraint.ConstraintLayout>
