@@ -95,7 +95,8 @@ public class MainActivity extends AppCompatActivity {
 //        System.out.println(urlList);
         final double randomURL = Math.random()* urlList.size();
         TextView urlTextView = (TextView) findViewById(R.id.factURL);
-        urlTextView.setText("Learn More Here");
+        String textPlaceholder = "Learn More Here";
+        urlTextView.setText(textPlaceholder);
         urlTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
