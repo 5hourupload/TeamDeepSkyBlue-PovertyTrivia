@@ -1,5 +1,7 @@
 package deepskyblue.povertycrack;
 
+import android.app.IntentService;
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -24,14 +26,17 @@ import static deepskyblue.povertycrack.MainActivity.sliderQuestions;
 import static deepskyblue.povertycrack.MainActivity.trueFalseQuestions;
 
 
-public class StatisticsReader extends AppCompatActivity
+public class StatisticsReader extends IntentService
 {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState)
+    public StatisticsReader()
     {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        super("man");
+    }
+    @Override
+    protected void onHandleIntent(Intent service)
+    {
+        System.out.println("Service started -------------------------------------");
         AssetManager am = getApplicationContext().getAssets();
         InputStream is = null;
         Workbook wb = null;

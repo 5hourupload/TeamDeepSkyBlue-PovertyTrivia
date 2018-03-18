@@ -17,8 +17,10 @@
         <activity android:name=".SoloGame">
 
         </activity>
-        <activity android:name=".StatisticsReader">
-        </activity>
+        <service  android:name=".StatisticsReader">
+            android:enabled="true"
+
+        </service>
         <activity android:name=".ResultScreen">
         </activity>
         <activity android:name=".Ans">

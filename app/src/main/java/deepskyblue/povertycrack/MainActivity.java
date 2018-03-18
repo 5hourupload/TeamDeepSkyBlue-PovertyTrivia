@@ -61,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
         d.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent newIntent = new Intent(MainActivity.this, StatisticsReader.class);
-                startActivity(newIntent);
+                Intent statistics = new Intent(MainActivity.this, StatisticsReader.class);
+                startService(statistics);
             }
         });
 

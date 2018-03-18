@@ -5,14 +5,10 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
-
-import java.util.ArrayList;
-
 import static deepskyblue.povertycrack.MainActivity.multChoiceQuestions;
 import static deepskyblue.povertycrack.MainActivity.results;
 import static deepskyblue.povertycrack.MainActivity.sliderQuestions;
@@ -31,17 +27,22 @@ public class SoloGame extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.questionbox_template);
+
+        Intent statistics = new Intent(getApplicationContext(), StatisticsReader.class);
+        startService(statistics);
+
+
         tf = findViewById(R.id.tf_view);
         mc = findViewById(R.id.mc_view);
         sl = findViewById(R.id.slider_view);
         qr = findViewById(R.id.question_result);
-        for (int i = 0; i < 99999; i++)
-        {
-            trueFalseQuestions.add(new Question(-1, "What?", "True", " ", false));
-            multChoiceQuestions.add(new Question(-1, "What?", "63893", " ", false));
-            sliderQuestions.add(new Question(-1, "What m8?", "63893", " ", false));
-
-        }
+//        for (int i = 0; i < 99999; i++)
+//        {
+//            trueFalseQuestions.add(new Question(-1, "What?", "True", " ", false));
+//            multChoiceQuestions.add(new Question(-1, "What?", "63893", " ", false));
+//            sliderQuestions.add(new Question(-1, "What m8?", "63893", " ", false));
+//
+//        }
         newQuestion();
     }
 
