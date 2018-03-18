@@ -13,6 +13,7 @@ import android.widget.TextView;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.SQLOutput;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Random;
 
@@ -94,6 +95,9 @@ public class StatisticsReader extends IntentService
                     break;
             }
         }
+        Collections.shuffle(trueFalseQuestions);
+        Collections.shuffle(multChoiceQuestions);
+        Collections.shuffle(sliderQuestions);
     }
 
     private Question generateTrueFalse(String year, String type, String group, String value){

@@ -84,14 +84,7 @@ public class SoloGame extends AppCompatActivity
         {
             question.correct = true;
             streak++;
-            if (score == 0)
-            {
-                score++;
-            }
-            else
-            {
-                score += streak;
-            }
+            score += streak;
         }
         else
         {
