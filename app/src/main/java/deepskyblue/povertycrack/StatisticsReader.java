@@ -117,18 +117,18 @@ public class StatisticsReader extends IntentService
             a = "False";
         }
         cf = "In " +year+ ", the " +type+ " for " +group+ " was " +value;
-        return new Question(-1, q, a, cf, false);
+        return new Question(-1, q, type, a, cf, false);
     }
 
     private Question generateMultipleChoice(String year, String type, String group, String value){
         String q = "In " +year+ ", what was the " +type+ " for " +group+ "?";
         String cf = "In " +year+ ", the " +type+ " for " +group+ " was " +value;
-        return new Question(-1, q, value, cf, false);
+        return new Question(-1, q, type, value, cf, false);
     }
 
     private Question generateSlider(String year, String type, String group, String value){
         String q = "In the year " +year+ ", what was the level of " +type+ " for " +group+ "?";
         String cf = "Can you believe that in " +year+ ", that the " +type+ " for " +group+ "was only" +value+ "!";
-        return new Question(-1, q, value, cf, false);
+        return new Question(-1, q, type, value, cf, false);
     }
 }

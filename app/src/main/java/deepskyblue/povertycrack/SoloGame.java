@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import java.sql.SQLOutput;
 import java.text.DecimalFormat;
 
 import static deepskyblue.povertycrack.MainActivity.multChoiceQuestions;
@@ -228,26 +227,7 @@ public class SoloGame extends AppCompatActivity {
                 checkS(slider.getProgress(), question);
             }
         });
-
-        final TextView seekBarText = (TextView) findViewById(R.id.seekBarText);
-        SeekBar seekBarTest = (SeekBar) findViewById(R.id.seekBarTest);
-
-        seekBarTest.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
-                seekBarText.setText("" + progress);
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
+        
     }
 
     private void clearLayouts() {
@@ -287,5 +267,4 @@ public class SoloGame extends AppCompatActivity {
             }
         }
     }
-
 }
