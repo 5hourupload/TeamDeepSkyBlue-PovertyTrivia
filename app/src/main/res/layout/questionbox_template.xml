@@ -10,24 +10,28 @@
         android:id="@+id/questionText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/transparent"
-
         android:layout_marginEnd="@dimen/margin"
+
         android:layout_marginStart="@dimen/margin"
         android:layout_marginTop="@dimen/margin"
+        android:background="@color/transparent"
 
         android:text="Question Placeholder Question Placeholder Question Placeholder Question Placeholder Question Placeholder Question Placeholder"
 
 
         android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.087" />
 
     <include
-        android:layout_height="match_parent"
+        android:id="@+id/include"
+        layout="@layout/multiplechoice_template"
         android:layout_width="match_parent"
-        layout="@layout/multiplechoice_template"/>
+        android:layout_height="match_parent" />
     <include
         android:layout_height="match_parent"
         android:layout_width="match_parent"
@@ -36,9 +40,32 @@
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         layout="@layout/truefalse_template"/>
+
     <include
-        android:layout_height="match_parent"
+        layout="@layout/question_result"
         android:layout_width="match_parent"
-        layout="@layout/question_result"/>
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/streakCounter"
+        android:layout_width="82dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Streak:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/scoreCounter"
+        android:layout_width="73dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Score:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

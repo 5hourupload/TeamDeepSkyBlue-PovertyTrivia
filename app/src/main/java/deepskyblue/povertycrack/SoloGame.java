@@ -20,6 +20,8 @@ import static deepskyblue.povertycrack.MainActivity.trueFalseQuestions;
 public class SoloGame extends AppCompatActivity
 {
     private int count = 0;
+    private int streak = 0;
+    private int score = 0;
     ConstraintLayout tf;
     ConstraintLayout mc;
     ConstraintLayout sl;
@@ -53,7 +55,6 @@ public class SoloGame extends AppCompatActivity
     private void newQuestion()
     {
         count++;
-        //currentQuestion = new Question(count, passedQ, passedA, false);
         switch ((int) (Math.random() * 2))
         {
             case 0:
@@ -72,6 +73,14 @@ public class SoloGame extends AppCompatActivity
                 slider(currentQuestion);
                 break;
         }
+
+        TextView streakCounter = findViewById(R.id.streakCounter);
+        String streakText = "Streak: " + streak;
+        streakCounter.setText(streakText);
+
+        TextView scoreCounter = findViewById(R.id.scoreCounter);
+        String scoreText = "Score: " + score;
+        streakCounter.setText(scoreText);
     }
 
     //Check functions for each type of question
@@ -81,6 +90,13 @@ public class SoloGame extends AppCompatActivity
         if (selectedA.equals(question.answer))
         {
             question.correct = true;
+            streak++;
+            if(score == 0){
+                score++;
+            }
+            else{
+                score += streak;
+            }
         }
         handleResults(selectedA, question);
 
@@ -94,6 +110,13 @@ public class SoloGame extends AppCompatActivity
         if (sliderSelection == Integer.parseInt(question.answer))
         {
             question.correct = true;
+            streak++;
+            if(score == 0){
+                score++;
+            }
+            else{
+                score += streak;
+            }
         }
         handleResults(Integer.toString(sliderSelection), question);
     }
