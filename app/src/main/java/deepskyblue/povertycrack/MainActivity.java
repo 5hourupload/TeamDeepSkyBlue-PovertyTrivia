@@ -25,6 +25,9 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Random;
 
+import jxl.Sheet;
+import jxl.read.biff.BiffException;
+
 public class MainActivity extends AppCompatActivity {
 
     static LinkedList<Question> multChoiceQuestions = new LinkedList<>();
@@ -88,13 +91,36 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        Question selectedQ = multChoiceQuestions.get((int)(Math.random() * multChoiceQuestions.size()));
-        String randFact = "Did you know: " +selectedQ.completeFact;
+        AssetManager am = getApplicationContext().getAssets();
+        InputStream is = null;
+        jxl.Workbook wb = null;
+        try
+        {
+            is = am.open("statistics.xls");
+            wb = jxl.Workbook.getWorkbook(is);
+        } catch (IOException e)
+        {
+            e.printStackTrace();
+        } catch (BiffException e)
+        {
+            e.printStackTrace();
+        }
+        Sheet s = wb.getSheet(0);
+        int rows = s.getRows();
+
+        int random = (int)(Math.random() * rows);
+        String arg1 = s.getCell(0,random).getContents();
+        String arg2 = s.getCell(1,random).getContents();
+        String arg3 = s.getCell(2,random).getContents();
+        String arg4 = s.getCell(3,random).getContents();
+
+        String randomFactText = "Did you know: In " +arg1+
+                ", The " +arg2+ " for " +arg3+ " was " +arg4;
         TextView randomFact = findViewById(R.id.dykFact);
-        randomFact.setText(randFact);
+        randomFact.setText(randomFactText);
 
         final double randomURL = Math.random()* urlList.size();
-        TextView urlTextView = (TextView) findViewById(R.id.factURL);
+        TextView urlTextView = findViewById(R.id.factURL);
         String textPlaceholder = "Learn More Here";
         urlTextView.setText(textPlaceholder);
         urlTextView.setOnClickListener(new View.OnClickListener() {

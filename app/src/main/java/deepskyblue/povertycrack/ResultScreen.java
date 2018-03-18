@@ -10,6 +10,8 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import static deepskyblue.povertycrack.MainActivity.results;
+
 public class ResultScreen extends AppCompatActivity
 {
 
@@ -19,12 +21,7 @@ public class ResultScreen extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.resultscreen);
 
-        Question[] questions = new Question[5];
-        questions[0] = new Question((int) Math.random(), "I", "You got it wrong", "This is the question", false);
-        questions[1] = new Question((int) Math.random(), "Suck", "You got it right", "asdf", true);
-        questions[2] = new Question((int) Math.random(), "at", "You got it wrong", "asdf", false);
-        questions[3] = new Question((int) Math.random(), "Coding", "You got it right", "asdf", true);
-        questions[4] = new Question((int) Math.random(), "!", "You got it wrong", "asdf", false);
+        Question[] questions = results.toArray(new Question[results.size()]);
         ListAdapter queAdapter = new CustomAdapter(this, questions);
         ListView myListView = (ListView) findViewById(R.id.myListView);
         myListView.setAdapter(queAdapter);
@@ -40,6 +37,7 @@ public class ResultScreen extends AppCompatActivity
                         //when clicked displays answer to the question
 //                        buttonClickFunction();
                         Intent intent = new Intent(ResultScreen.this, Ans.class);
+                        intent.putExtra("test","answer");
                         startActivity(intent);
                     }
                 }

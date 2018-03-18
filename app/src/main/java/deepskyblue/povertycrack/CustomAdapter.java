@@ -26,10 +26,13 @@ class CustomAdapter extends ArrayAdapter<Question>
         View customView = myInflater.inflate(R.layout.custom_row, parent, false);
 
         Question singleQuestionItem = getItem(position);
-        TextView stringText = (TextView) customView.findViewById(R.id.textView);
+        TextView questionText = (TextView) customView.findViewById(R.id.questionResult);
+        TextView answerText = (TextView) customView.findViewById(R.id.answerResult);
         ImageView myImage = (ImageView) customView.findViewById(R.id.imageView);
 
-        stringText.setText(singleQuestionItem.question);
+        questionText.setText(singleQuestionItem.question);
+        answerText.setText(singleQuestionItem.answer);
+
         if (singleQuestionItem.correct)
         {
             myImage.setImageResource(R.drawable.checkmark);
