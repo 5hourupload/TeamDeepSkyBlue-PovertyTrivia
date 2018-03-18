@@ -19,6 +19,7 @@ import jxl.read.biff.BiffException;
 
 public class MainActivity extends AppCompatActivity {
 
+    //The lists that will hold the various diverse generated questions
     static LinkedList<Question> multChoiceQuestions = new LinkedList<>();
     static LinkedList<Question> trueFalseQuestions = new LinkedList<>();
     static LinkedList<Question> sliderQuestions = new LinkedList<>();
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         Intent statistics = new Intent(MainActivity.this, StatisticsReader.class);
         startService(statistics);
 
+        //Start button that initiates the game.
         Button buttonSolo = findViewById(R.id.buttonSolo);
         buttonSolo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,15 +47,19 @@ public class MainActivity extends AppCompatActivity {
         //URL list of helpful sites related to poverty
         final LinkedList<String> urlList = new LinkedList<>();
 
+        /*Initial buffered reader that will take in a .txt file from the assets folder and
+        parse it into separate strings*/
         BufferedReader urlReader = null;
         try {
+            //Looking to find assets, specifically opens up the URLS.txt
             urlReader = new BufferedReader(
                     new InputStreamReader(getAssets().open("URLs.txt")));
 
-            // do reading, usually loop until end of file reading
+            /*String that will be set to the url buffered reader and will be added to the urlList
+            until the buffered reader is out of lines to read from the file*/
             String mLine;
             while ((mLine = urlReader.readLine()) != null) {
-                //process line
+                //String is added into the urlList
                 urlList.add(mLine);
 
             }
@@ -69,11 +75,19 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+        /*
+        The following will take in information from an excel .xls file and harvest that information
+        to later be used to generate a question by taking in the data and setting it to instances.
+         */
         AssetManager am = getApplicationContext().getAssets();
         InputStream is = null;
         jxl.Workbook wb = null;
         try
         {
+            /*
+            The asset manager opens up the specified folder from the app assets and sets the Input
+            Stream (is) to
+             */
             is = am.open("focused_statistics.xls");
             wb = jxl.Workbook.getWorkbook(is);
             is.close();

@@ -159,8 +159,14 @@ public class SoloGame extends AppCompatActivity {
                 DecimalFormat formatter = new DecimalFormat("##,###");
                 Answers[i] = "$" + formatter.format(value);
             }
+            if(question.answer.contains("0.")){
+                double doubleValue = Math.abs(correctAnswerTemp + Math.random());
+                DecimalFormat formatter = new DecimalFormat("#.##");
+                Answers[i] = formatter.format(doubleValue);
+            }
             else{
-                Answers[i] = Integer.toString(value);
+                DecimalFormat formatter = new DecimalFormat("###,###,###");
+                Answers[i] = formatter.format(value);
             }
         }
         //final String correctAnswer = correctAnswerTemp;
