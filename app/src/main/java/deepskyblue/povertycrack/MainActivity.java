@@ -38,8 +38,9 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Intent newIntent = new Intent(this, StatisticsReader.class);
-        //startActivity(newIntent);
+
+        Intent statistics = new Intent(MainActivity.this, StatisticsReader.class);
+        startService(statistics);
 
         Button buttonSolo = findViewById(R.id.buttonSolo);
         buttonSolo.setOnClickListener(new View.OnClickListener() {
@@ -55,14 +56,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent newIntent = new Intent(MainActivity.this, ResultScreen.class);
                 startActivity(newIntent);
-            }
-        });
-        TextView d = findViewById(R.id.dykFact);
-        d.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent statistics = new Intent(MainActivity.this, StatisticsReader.class);
-                startService(statistics);
             }
         });
 
@@ -95,7 +88,8 @@ public class MainActivity extends AppCompatActivity {
 //        System.out.println(urlList);
         final double randomURL = Math.random()* urlList.size();
         TextView urlTextView = (TextView) findViewById(R.id.factURL);
-        urlTextView.setText("Learn More Here");
+        String textPlaceholder = "Learn More Here";
+        urlTextView.setText(textPlaceholder);
         urlTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

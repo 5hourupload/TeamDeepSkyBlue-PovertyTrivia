@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import java.text.DecimalFormat;
+
 import static deepskyblue.povertycrack.MainActivity.multChoiceQuestions;
 import static deepskyblue.povertycrack.MainActivity.results;
 import static deepskyblue.povertycrack.MainActivity.sliderQuestions;
@@ -27,9 +30,6 @@ public class SoloGame extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.questionbox_template);
-
-        Intent statistics = new Intent(getApplicationContext(), StatisticsReader.class);
-        startService(statistics);
 
 
         tf = findViewById(R.id.tf_view);
@@ -76,10 +76,8 @@ public class SoloGame extends AppCompatActivity
 
     //Check functions for each type of question
     //Parameters include the selected answer compared to the correct answer
-    private void checkTF(String selectedA, Question question)
+    private void checkAnswer(String selectedA, Question question)
     {
-        System.out.println(selectedA);
-        System.out.println(question.answer);
         if (selectedA.equals(question.answer))
         {
             question.correct = true;
@@ -89,15 +87,7 @@ public class SoloGame extends AppCompatActivity
 
     }
 
-    private void checkMC(int selectedA, Question question)
-    {
-        if (selectedA == Integer.parseInt(question.answer))
-        {
-            question.correct = true;
-        }
-        handleResults(Integer.toString(selectedA), question);
 
-    }
 
     private void checkS(int sliderSelection, Question question)
     {
@@ -124,7 +114,7 @@ public class SoloGame extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                checkTF("True", question);
+                checkAnswer("True", question);
             }
         });
         Button False = findViewById(R.id.buttonFalse);
@@ -133,7 +123,7 @@ public class SoloGame extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                checkTF("False", question);
+                checkAnswer("False", question);
             }
         });
     }
@@ -146,57 +136,59 @@ public class SoloGame extends AppCompatActivity
 
         mc.setVisibility(View.VISIBLE);
 
-        int[] Answers = new int[4];
-        int correctAnswerTemp = Integer.parseInt(question.answer);
+        String[] Answers = new String[4];
+        String number = question.answer.replace(",", "").replace("$","");
+        int correctAnswerTemp = Integer.parseInt(number);
         int random = (int) (Math.random() * 4);
-        Answers[random] = correctAnswerTemp;
+        Answers[random] = question.answer;
         for (int i = 0; i < 4; i++)
         {
             if (i == random) continue;
-            Answers[i] = correctAnswerTemp + (int) Math.round(((Math.random() * 10) - 5) * 5000);
-            System.out.println(Answers[i]);
+            int value = correctAnswerTemp + (int) Math.round(((Math.random() * 10) - 5) * 5000);
+            DecimalFormat formatter = new DecimalFormat("##,###");
+            Answers[i] = "$" + formatter.format(value);
         }
         //final String correctAnswer = correctAnswerTemp;
-        final int[] finalAnswers = Answers;
+        final String[] finalAnswers = Answers;
         Button buttonOption1 = findViewById(R.id.questionOption1);
         System.out.println(finalAnswers[0]);
-        buttonOption1.setText(Integer.toString(finalAnswers[0]));
+        buttonOption1.setText(finalAnswers[0]);
         buttonOption1.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                checkMC(finalAnswers[0], question);
+                checkAnswer(finalAnswers[0], question);
             }
         });
         Button buttonOption2 = findViewById(R.id.questionOption2);
-        buttonOption2.setText(Integer.toString(finalAnswers[1]));
+        buttonOption2.setText(finalAnswers[1]);
         buttonOption2.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                checkMC(finalAnswers[1], question);
+                checkAnswer(finalAnswers[1], question);
             }
         });
         Button buttonOption3 = findViewById(R.id.questionOption3);
-        buttonOption3.setText(Integer.toString(finalAnswers[2]));
+        buttonOption3.setText(finalAnswers[2]);
         buttonOption3.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                checkMC(finalAnswers[2], question);
+                checkAnswer(finalAnswers[2], question);
             }
         });
         Button buttonOption4 = findViewById(R.id.questionOption4);
-        buttonOption4.setText(Integer.toString(finalAnswers[3]));
+        buttonOption4.setText(finalAnswers[3]);
         buttonOption4.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                checkMC(finalAnswers[3], question);
+                checkAnswer(finalAnswers[3], question);
             }
         });
     }
