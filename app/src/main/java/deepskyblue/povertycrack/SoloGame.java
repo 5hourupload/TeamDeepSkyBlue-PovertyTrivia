@@ -50,10 +50,10 @@ public class SoloGame extends AppCompatActivity
 
     //every new question that is called in main calls this method
     //This method calls the appropriate method to execute the question
-    private Question currentQuestion;
 
     private void newQuestion()
     {
+        Question currentQuestion;
         count++;
         switch ((int) (Math.random() * 2))
         {
@@ -98,6 +98,10 @@ public class SoloGame extends AppCompatActivity
                 score += streak;
             }
         }
+        else{
+            streak = 0;
+            score--;
+        }
         handleResults(selectedA, question);
 
 
@@ -117,6 +121,10 @@ public class SoloGame extends AppCompatActivity
             else{
                 score += streak;
             }
+        }
+        else{
+            streak = 0;
+            score--;
         }
         handleResults(Integer.toString(sliderSelection), question);
     }

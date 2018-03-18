@@ -44,4 +44,28 @@
         android:min="0"
         android:max="100" />
 
+    <TextView
+        android:id="@+id/minSlider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="minValue"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="606dp" />
+
+    <TextView
+        android:id="@+id/maxSlider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="maxValue"
+        tools:layout_editor_absoluteX="349dp"
+        tools:layout_editor_absoluteY="606dp" />
+
+    <TextView
+        android:id="@+id/currentSlider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="currentValue"
+        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteY="553dp" />
+
 </android.support.constraint.ConstraintLayout>

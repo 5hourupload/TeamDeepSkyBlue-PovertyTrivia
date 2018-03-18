@@ -11,10 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8585e0db-c586-4a65-bbf7-833dd31feea4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/assets/statistics.xls" afterPath="$PROJECT_DIR$/src/main/assets/statistics.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java" afterPath="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/questionbox_template.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/questionbox_template.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,8 +61,8 @@
       <file leaf-file-name="StatisticsReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="61" selection-end-column="31" />
+            <state relative-caret-position="458">
+              <caret line="48" column="24" lean-forward="false" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
               <folding>
                 <element signature="e#955#956#0" expanded="true" />
                 <element signature="e#983#984#0" expanded="true" />
@@ -105,7 +102,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="questionbox_template.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="questionbox_template.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/res/layout/questionbox_template.xml">
           <provider editor-type-id="text-editor">
             <state relative-caret-position="680">
@@ -120,23 +117,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SoloGame.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SoloGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2244">
-              <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+            <state relative-caret-position="-2890">
+              <caret line="102" column="20" lean-forward="false" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="slider_template.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/res/layout/slider_template.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="1020">
+              <caret line="30" column="43" lean-forward="true" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="2618">
-              <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+            <state relative-caret-position="2584">
+              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding>
-                <marker date="1521346749252" expanded="true" signature="3107:3108" ph="..." />
+                <marker date="1521349337227" expanded="true" signature="3117:3118" ph="..." />
               </folding>
             </state>
           </provider>
@@ -1879,12 +1889,12 @@
         <option value="$PROJECT_DIR$/src/main/res/layout/truefalse_template.xml" />
         <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/question.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/selectall_template.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/slider_template.xml" />
         <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/Question.java" />
         <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/ResultScreen.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/questionbox_template.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/slider_template.xml" />
         <option value="$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java" />
       </list>
     </option>
@@ -2698,7 +2708,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1521346749259" expanded="true" signature="2427:2428" ph="..." />
+            <marker date="1521348540707" expanded="true" signature="2940:2941" ph="..." />
           </folding>
         </state>
       </provider>
@@ -2778,7 +2788,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1521346749259" expanded="true" signature="2427:2428" ph="..." />
+            <marker date="1521348540707" expanded="true" signature="2940:2941" ph="..." />
           </folding>
         </state>
       </provider>
@@ -2919,19 +2929,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1521346749259" expanded="true" signature="2427:2428" ph="..." />
+            <marker date="1521348540707" expanded="true" signature="2940:2941" ph="..." />
           </folding>
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/slider_template.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="30" column="44" lean-forward="false" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
@@ -2948,28 +2947,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="2618">
-          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        <state relative-caret-position="2584">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
           <folding>
-            <marker date="1521346749252" expanded="true" signature="3107:3108" ph="..." />
+            <marker date="1521349337227" expanded="true" signature="3117:3118" ph="..." />
           </folding>
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="61" selection-end-column="31" />
-          <folding>
-            <element signature="e#955#956#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-            <element signature="e#1053#1054#0" expanded="true" />
-            <element signature="e#1088#1089#0" expanded="true" />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/MainActivity.java">
@@ -3008,14 +2994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2244">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/questionbox_template.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -3027,6 +3005,38 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
         <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/StatisticsReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="48" column="24" lean-forward="false" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+          <folding>
+            <element signature="e#955#956#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#1053#1054#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/slider_template.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="30" column="43" lean-forward="true" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/deepskyblue/povertycrack/SoloGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2890">
+          <caret line="102" column="20" lean-forward="false" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
+          <folding />
+        </state>
       </provider>
     </entry>
   </component>
