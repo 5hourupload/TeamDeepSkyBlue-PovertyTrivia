@@ -127,7 +127,8 @@ public class StatisticsReader extends IntentService
             q = "True or False: In " + year + ", the " + type + " for " + group + " was " + shift + "?";
             a = "False";
         }
-        cf = "In " + year + ", the " + type + " for " + group + " was " + value;
+        DecimalFormat formatter = new DecimalFormat("###,###,###");
+        cf = "In " + year + ", the " + type + " for " + group + " was " + formatter.format(value);
         return new Question(-1, q, type, a, cf, false);//returns formatted question
     }
 
