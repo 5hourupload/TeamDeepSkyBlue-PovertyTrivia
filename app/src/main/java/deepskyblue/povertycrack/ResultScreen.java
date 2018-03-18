@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import org.w3c.dom.Text;
 
 import static deepskyblue.povertycrack.MainActivity.results;
@@ -44,6 +43,8 @@ public class ResultScreen extends AppCompatActivity
 
         TextView tallyCounter = findViewById(R.id.tallyCounterTV);
         tallyCounter.setText("Correct: " + rightCount + " " + "Wrong: " + wrongCount);
+        TextView scoreTally = findViewById(R.id.scoreTally);
+        scoreTally.setText("Score: " + SoloGame.score);
         ListAdapter queAdapter = new CustomAdapter(this, questions);
         ListView myListView = (ListView) findViewById(R.id.myListView);
         myListView.setAdapter(queAdapter);

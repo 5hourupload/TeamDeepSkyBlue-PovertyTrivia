@@ -21,9 +21,9 @@ import static deepskyblue.povertycrack.MainActivity.trueFalseQuestions;
 public class SoloGame extends AppCompatActivity
 {
     private int count = 0;
-    private int streak = 0;
-    private int highScore = 0;
-    private int score = 0;
+    public static int streak = 0;
+    public static int highScore = 0;
+    public static int score = 0;
     ConstraintLayout tf;
     ConstraintLayout mc;
     ConstraintLayout sl;
@@ -84,14 +84,7 @@ public class SoloGame extends AppCompatActivity
         {
             question.correct = true;
             streak++;
-            if (score == 0)
-            {
-                score++;
-            }
-            else
-            {
-                score += streak;
-            }
+            score += streak;
         }
         else
         {
@@ -242,11 +235,25 @@ public class SoloGame extends AppCompatActivity
         clearLayouts();
         sl.setVisibility(View.VISIBLE);
         final SeekBar slider = findViewById(R.id.slider);
-        slider.setMax(100000);
-        slider.setMax(50000);
+        int newMax = (int)(Integer.parseInt(question.answer) + (Integer.parseInt(question.answer) * Math.random()));
+        slider.setMax(newMax);
+        slider.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                TextView currentSelected = findViewById(R.id.currentSlider);
+                currentSelected.setText(slider.getProgress());
+            }
 
-        //int newMax = (int)(Integer.parseInt(Answer) + (Integer.parseInt(Answer) * Math.random()));
-        //slider.setMax(newMax);
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
         Button sliderButton = findViewById(R.id.sliderButton);
         sliderButton.setOnClickListener(new View.OnClickListener()
         {

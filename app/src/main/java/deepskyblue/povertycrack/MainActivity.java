@@ -29,9 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Collections.shuffle(multChoiceQuestions);
-        Collections.shuffle(trueFalseQuestions);
-        Collections.shuffle(sliderQuestions);
 
         Intent statistics = new Intent(MainActivity.this, StatisticsReader.class);
         startService(statistics);
