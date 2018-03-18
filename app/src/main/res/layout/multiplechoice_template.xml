@@ -54,7 +54,8 @@
                 android:id="@+id/questionOption3"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/buttonHeightStandard100"
-                android:text="Option3" />
+                android:text="Option3"
+                android:background="@drawable/button_gradient"/>
 
             <Button
                 android:id="@+id/questionOption4"
