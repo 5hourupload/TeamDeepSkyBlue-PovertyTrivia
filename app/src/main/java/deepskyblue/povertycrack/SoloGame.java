@@ -24,7 +24,6 @@ public class SoloGame extends AppCompatActivity {
     public static int score = 0;
     ConstraintLayout tf;
     ConstraintLayout mc;
-    ConstraintLayout sl;
     ConstraintLayout qr;
 
     @Override
@@ -34,7 +33,6 @@ public class SoloGame extends AppCompatActivity {
         setContentView(R.layout.questionbox_template);
         tf = findViewById(R.id.tf_view);
         mc = findViewById(R.id.mc_view);
-        sl = findViewById(R.id.slider_view);
         qr = findViewById(R.id.question_result);
         newQuestion();
     }
@@ -45,7 +43,7 @@ public class SoloGame extends AppCompatActivity {
     private void newQuestion() {
         Question currentQuestion;
         count++;
-        switch (1/*(int) (Math.random() * 2)*/) {
+        switch ((int) (Math.random() * 2)) {
             case 0:
                 currentQuestion = trueFalseQuestions.pop();
                 currentQuestion.num = count;
@@ -55,11 +53,6 @@ public class SoloGame extends AppCompatActivity {
                 currentQuestion = multChoiceQuestions.pop();
                 currentQuestion.num = count;
                 multipleChoice(currentQuestion);
-                break;
-            case 2:
-                currentQuestion = sliderQuestions.pop();
-                currentQuestion.num = count;
-                slider(currentQuestion);
                 break;
         }
 
@@ -156,24 +149,24 @@ public class SoloGame extends AppCompatActivity {
         for (int i = 0; i < 4; i++) {
             if (i == random) continue;
             int value = correctAnswerTemp + (int) Math.round(((Math.random() * 10) - 5) * 5000);
-            if(question.answer.contains("$")){
+            if(question.question.contains("Income")){
                 DecimalFormat formatter = new DecimalFormat("##,###");
                 Answers[i] = "$" + formatter.format(value);
             }
-            if(question.answer.contains("0.")){
+            else if(question.answer.contains("0.")){
                 double doubleValue = Math.abs(correctAnswerTemp + Math.random());
                 DecimalFormat formatter = new DecimalFormat("#.##");
                 Answers[i] = formatter.format(doubleValue);
             }
             else{
                 DecimalFormat formatter = new DecimalFormat("###,###,###");
+                value = (value /1000) * 1000;
                 Answers[i] = formatter.format(Math.abs(value));
             }
         }
         //final String correctAnswer = correctAnswerTemp;
         final String[] finalAnswers = Answers;
         Button buttonOption1 = findViewById(R.id.questionOption1);
-        System.out.println(finalAnswers[0]);
         buttonOption1.setText(finalAnswers[0]);
         buttonOption1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -207,45 +200,10 @@ public class SoloGame extends AppCompatActivity {
         });
     }
 
-    private void slider(final Question question) {
-        TextView Q = findViewById(R.id.questionText);
-        Q.setText(question.question);
-        clearLayouts();
-        sl.setVisibility(View.VISIBLE);
-        final SeekBar slider = findViewById(R.id.slider);
-        int newMax = (int) (Integer.parseInt(question.answer) + (Integer.parseInt(question.answer) * Math.random()));
-        slider.setMax(newMax);
-        slider.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                TextView currentSelected = findViewById(R.id.currentSlider);
-                currentSelected.setText(slider.getProgress());
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-        Button sliderButton = findViewById(R.id.sliderButton);
-        sliderButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                checkS(slider.getProgress(), question);
-            }
-        });
-        
-    }
 
     private void clearLayouts() {
         tf.setVisibility(View.INVISIBLE);
         mc.setVisibility(View.INVISIBLE);
-        sl.setVisibility(View.INVISIBLE);
         qr.setVisibility(View.INVISIBLE);
     }
 
@@ -272,7 +230,7 @@ public class SoloGame extends AppCompatActivity {
             }
         });
 
-        if (results.size() >= 2) {
+        if (results.size() >= 2000) {
             if (!results.get(results.size() - 1).correct && !results.get(results.size() - 2).correct) {
                 Intent newIntent = new Intent(getApplicationContext(), ResultScreen.class);
                 startActivity(newIntent);
