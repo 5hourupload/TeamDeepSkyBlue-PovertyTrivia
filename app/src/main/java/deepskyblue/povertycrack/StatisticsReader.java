@@ -13,6 +13,7 @@ import android.widget.TextView;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.SQLOutput;
+import java.text.DecimalFormat;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Random;
@@ -98,8 +99,21 @@ public class StatisticsReader extends IntentService
             a = "True";
         }
         else{
-            int shiftedIncome = (int)(Math.random() * (87_057 - 30_572)) + 30_572;
-            q = "True or False: In " +year+ ", the " +type+ " for " +group+ " was " +shiftedIncome+ "?";
+            String shift = "";
+            if (type.contains("Income"))
+            {
+                shift = "$" + (int)(Math.random() * (87_057 - 30_572)) + 30_572;
+            }
+            else if (type.contains("percentage"))
+            {
+                DecimalFormat formatter = new DecimalFormat("#.##");
+                shift = formatter.format(Math.random() * 1);
+            }
+            else
+            {
+                shift = Integer.toString((int) ((Math.random() * (100_000)) + 10_000));
+            }
+            q = "True or False: In " +year+ ", the " +type+ " for " +group+ " was " +shift + "?";
             a = "False";
         }
         cf = "In " +year+ ", the " +type+ " for " +group+ " was " +value;
